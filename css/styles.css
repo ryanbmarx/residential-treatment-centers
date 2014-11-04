@@ -1,0 +1,78 @@
+/* NOTES */
+/*
+cubs_red	#CB3333
+cubs_blue	#056699
+chicago_blue	#B4DDF1
+chicago_red	#ED2224
+
+*/
+
+/* OTHER STUFF */
+.hide{display:none}
+nobreak,.nobreak{white-space: nowrap;}
+.make-relative{position:relative;}
+.give-shadow{box-shadow: 0 0 18px #555;}
+
+
+/* FB COMMENTS */
+#fb-comments-container .fb-comment-disclaimer {	font-size: 16px;line-height: 27px;float: right;margin-bottom: 20px;}
+#fb-comments-container{width:100%;}
+
+/* UNDO STORY PAGE STYLES */
+article p,article h1,article h2,article h3,article h4,article h5,article h6 {max-width:none;}
+article h1,article h2,article h3,article h4,article h5,article h6 {line-height:1.4em;}
+
+/* ADD-IN NGUX UNTIl IT'S NATIVE */
+article p {color: #666;font-size: 18px;line-height: 27px;margin-bottom: 18px;position: relative;white-space: normal;}
+ul p, ol p{font-size: 16px}
+
+/* advert wrapper */
+.advert-wrapper {margin-top:25px;margin-bottom:25px;}
+.right{float:right;margin:25px 0 25px 25px;}
+
+/* limit content to a 768px, horizontally centered grouping */
+.constrained{max-width:768px;margin:0 auto;}
+.credits{margin-top:25px;}
+
+/* Let's make footable nicer, shall we?*/
+.footable  {font-family:'Arial', sans-serif;}
+.footable>thead>tr>th{border-radius: 0;background-color: #144A7C;background-image: none;color: #fff;text-shadow: none;}
+.footable tbody tr:nth-child(even){background:#E2EAF1;}
+.footable>thead>tr>th:last-child, .footable>thead>tr>td:last-child,.footable>thead>tr>th:first-child, .footable>thead>tr>td:first-child{border-radius: 0}
+
+
+/* perfect for charting legends*/
+.box{display: inline-block;background-color: black;height: 13px;width: 13px;margin: 0 5px 0 15px;}
+
+/*basic chart styles*/
+.grafx-wrapper p {font-family:'Arial', sans-serif;}
+.grafx-wrapper .explainer {font-family: 'arial', sans-serif;font-size: 15px;line-height: 1.4em;color: #666;}
+.grafx-wrapper .grfx-label {font-family: 'arial', sans-serif;font-weight:bold;font-size: 17px;line-height: 1.3em;margin-bottom: 3px;}
+
+/* Bootstrap tooltips */
+.tooltip-inner{font-family:'Arial', sans-serif;font-weight:bold;}
+
+/* AFFIX STYLES */
+.affix{top:41px;z-index:1001;}
+
+/*INTRODUCTION STYLES*/
+#intro h1{font-size:60px;line-height: 1.2em}
+
+@media (max-width: 1000px){
+	.affix{top:0;}	
+}
+
+@media (max-width: 768px) {
+	.advert-wrapper.right{float:none; margin: 25px 0;}
+}
+
+@media (max-width: 400px) {
+ 
+}
+
+@media (max-width: 350px) {
+	.advert-wrapper.right,
+	.advert-wrapper{
+		margin-left: -20px;
+	}
+}

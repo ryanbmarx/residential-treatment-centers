@@ -1,7 +1,53 @@
+{# ##### HERE BE FOOTABLE #######
+<link href="http://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css" rel="stylesheet" type="text/css" />
+<link href="http://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.sortable.min.css" rel="stylesheet" type="text/css" />
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.sortable.min.js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.filter.min.js'></script>
+
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js'></script>
+
+#}
+
+
 {% extends "_base.html" %}
+
+{% block scripts %}
+<script type='text/javascript' src='js/app.js'></script>
+{% endblock %}
+
+{% block css %}
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+{% endblock %}
+
+{% block meta %}
+<meta property="fb:app_id" content="306836229411287" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+{% endblock %}
+
 
 {% block content %}
 <div class="container-fluid">
-<h1>Add your content here!</h1>
+	<div class='advert-wrapper'>
+		<div class='advert center' data-ad-type='leaderboard'></div>
+	</div>
+	<article id='intro'>
+		<div class='advert-wrapper right'>
+			<div class='advert' data-ad-type='cube'></div>
+		</div>
+		<h1>{{ headline }}</h1>
+		<p>{{ chatter }}</p>
+		<div class='clearfix'></div>
+
+	</article>
+
+	<div class='credits'>
+		<p>{{ sources }}</p>
+		<p>{{ credits }}</p>
+	</div>
+	{% include '_facebook_comments.html' %}
 </div>
 {% endblock content %}
