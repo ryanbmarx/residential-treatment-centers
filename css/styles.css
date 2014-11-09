@@ -73,11 +73,13 @@ font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-to
 .graphic-novel h3{font-size: 30px;}
 .graphic-novel p{font-size: 24px;line-height: 1.1em;}
 
-a.footnote sup{
+
+a.footnote{
 	display:inline;
-	padding:5px;
-	color:#fff;
-	background-color: #000;
+	padding:3px 5px;
+	border-radius: 3px;
+	color:#62A5EF;
+	background-color: #fff;
 	font-size: 12px;
 	margin-bottom:12px;
 	font-family: 'arial', sans-serif;

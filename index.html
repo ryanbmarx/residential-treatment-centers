@@ -18,6 +18,11 @@
 
 
 {% block content %}
+
+{% macro footnote(numeral) %}
+	<a class='footnote' href='#footnote{{ numeral }}'>{{ numeral }}</a>
+{% endmacro%}
+
 <div class="container-fluid graphic-novel-container">
 	<!-- <div class='advert-wrapper'>
 		<div class='advert center' data-ad-type='leaderboard'></div>
@@ -32,7 +37,7 @@
 		<h2 class='text-center'>Sub hede here here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h2>
 		<div id='intro' class='panel-wrapper'>
 			<img class='text-center' src='img/keyona/day2-frame1.jpg' />
-			<p> Jason “Keyona” Laws Jr. was born 19 years ago to a drug-addicted mother on Chicago’s West Side.</p>
+			<p> Jason “Keyona” Laws Jr. was born 19 years ago to a drug-addicted mother on Chicago’s West Side.{{ footnote(1) }}</p>
 		</div>
 		<section class='gn-river'>
 			<div class='divider white'></div>
@@ -72,7 +77,7 @@
 				</div>
 			</div>
 			<h2 id='come-on' class='white text-center'>COME ON!</h2>
-			<h2 class='text-center white'>Laws dropped her bag, put up her hands to ﬁght <a class='footnote'><sup>1</sup></a></h2>
+			<h2 class='text-center white'>Laws dropped her bag, put up her hands to ﬁght {{footnote(2) }}</h2>
 			<div class='row-fluid'>
 				<div class='span12'>
 					<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
@@ -158,22 +163,32 @@
 					<h3 class='white'>“I knew about prostituting before I got to Lawrence Hall. But I wanted to make a change in my life. At Lawrence Hall, I got pushed back into prostituting.”</h3>
 					<h3 class='white'>
 						“No kid who is a ward of the state should be out here prostituting …” Laws said.</h3>
+					</div>
 				</div>
+			</section>
+			<h2 class='white text-center'>Laws stayed in Lawrence Hall for roughly two months until January 2012, when she ﬁnally ran away for good. Today, she is trying to get her GED. She hopes to attend college and get her life on track.</h2>
+			<h2 class='text-center'>“Kids at Lawrence Hall are still out there prostituting. They go all over the city of Chicago.”</h2>
+			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
+
+			<section class='footnotes texst-center'>
+				<div class='divider'></div>
+				<h2 class='text-center'>Footnotes</h2>
+				{% set chapter = 'keyona' %}
+				<ul class='unstyled'>
+					{% for row in footnotes if row.novel == chapter %}
+					<li id='footnote{{ row.numeral }}'>
+						<p class='text-center'><strong>{{ row.numeral }}. </strong>{{ row.note }}</p>
+					</li>	
+					{% endfor %}
+				</ul>	
+			</section>
+
+		</article>
+
+		<div class='credits'>
+			<p>{{ sources }}</p>
+			<p>{{ credits }}</p>
+		</div>
+		{# include '_facebook_comments.html' #}
 	</div>
-		</section>
- <h2 class='white text-center'>Laws stayed in Lawrence Hall for roughly two months until January 2012, when she ﬁnally ran away for good. Today, she is trying to get her GED. She hopes to attend college and get her life on track.</h2>
- <h2 class='text-center'>“Kids at Lawrence Hall are still out there prostituting. They go all over the city of Chicago.”</h2>
-					<img class='make-center' src='img/keyona/day2-frame20.jpg' />
-
-<section class='footnotes'>
-</section>
-
-	</article>
-
-	<div class='credits'>
-		<p>{{ sources }}</p>
-		<p>{{ credits }}</p>
-	</div>
-	{# include '_facebook_comments.html' #}
-</div>
-{% endblock content %}
+	{% endblock content %}
