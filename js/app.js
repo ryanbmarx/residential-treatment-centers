@@ -13,6 +13,22 @@ var add_facebook_comments = function() {
   $("#fb-comments").append(fbml);
 };
 
+// set the footnote clicks so they take you back to where you were
+
+var returnTo = '#';
+$('.footnote').click(function(){
+  returnTo = $(this).attr('id');
+  console.log(returnTo);
+});
+
+$('.return').click(function(e){
+  console.log(returnTo);
+  e.preventDefault();
+  var scrollReturn = ($('#'+returnTo).parent().offset().top) + 120;
+    console.log(scrollReturn);
+    $('html, body').scrollTop(scrollReturn);
+
+})
 
 
 $(document).ready(function(){
