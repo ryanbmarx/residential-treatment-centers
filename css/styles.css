@@ -64,7 +64,7 @@ ul p, ol p{font-size: 16px}
 /* GRAPHIC NOVEL STYLES */
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
-.container-fluid.graphic-novel-container {background-color:#62A5EF;}
+body, .container-fluid.graphic-novel-container {background-color:#62A5EF;}
 
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
 font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
@@ -76,16 +76,28 @@ font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-to
 
 a.footnote{
 	display:inline;
-	padding:3px 5px;
+	padding:2px 3px;
 	border-radius: 3px;
-	color:#62A5EF;
-	background-color: #fff;
+	color:#fff;
+	background-color: #000;
 	font-size: 12px;
 	margin-bottom:12px;
 	font-family: 'arial', sans-serif;
 	font-weight: bold;
-
 }
+
+a.footnote:hover{background-color: #888;text-decoration: none;}
+
+.white a.footnote{
+	color:#62A5EF;
+	background-color: #fff;
+}
+
+.white a.footnote:hover{
+	background-color: #E1E8FB;
+}
+
+
 
 .graphic-novel .divider {
 	background: url('../img/rule-horiz.png') #62A5EF center -5px no-repeat;
