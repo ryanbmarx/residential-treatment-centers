@@ -69,34 +69,26 @@ body, .container-fluid.graphic-novel-container {background-color:#62A5EF;}
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
 font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
 .graphic-novel h1{font-size: 120px;}
-.graphic-novel h2{font-size: 42px;}
+.graphic-novel h2{font-size: 42px;margin-bottom: .5em;}
 .graphic-novel h3{font-size: 30px;}
-.graphic-novel p{font-size: 24px;line-height: 1.1em;}
+.graphic-novel p{font-size: 24px;line-height: 1.1em;margin:10px 0 20px 0;}
 
 
 a.footnote{
 	display:inline;
 	padding:2px 3px;
 	border-radius: 3px;
+	vertical-align: super; 
 	color:#fff;
 	background-color: #000;
 	font-size: 12px;
 	margin-bottom:12px;
-	font-family: 'arial', sans-serif;
-	font-weight: bold;
+	font-family: 'arial black', 'arial', sans-serif;
+	font-weight: bolder;
 }
-
-a.footnote:hover{background-color: #888;text-decoration: none;}
-
-.white a.footnote{
-	color:#62A5EF;
-	background-color: #fff;
-}
-
-.white a.footnote:hover{
-	background-color: #E1E8FB;
-}
-
+a.footnote:hover{background-color: #333;text-decoration: none;}
+.white a.footnote{color:#62A5EF;background-color: #fff;}
+.white a.footnote:hover{background-color: #E1E8FB;}
 
 
 .graphic-novel .divider {
@@ -111,24 +103,14 @@ a.footnote:hover{background-color: #888;text-decoration: none;}
 
 .graphic-novel .white{color:#fff;}
 .bg-white{background-color:#fff;}
-.graphic-novel img{
-	width:100%;
-	max-width: 800px;
-}
-.graphic-novel img.slim{
-	max-width:400px;
-	display:block;
-	margin:15px auto;
-}
 
-.graphic-novel img.make-center{
-	display: block;
-	margin:0 auto;
-}
+.graphic-novel img{width:100%;max-width: 800px;}
+.graphic-novel img.slim{max-width:400px;display:block;margin:15px auto;}
+.graphic-novel img.make-center{display: block;margin:0 auto;}
 
 .border{border:2px solid black;}
 
-.border-caption{
+p.border-caption{
 	padding: 15px;
 	background-color: #fff;
 	border: 2px solid black;
@@ -147,10 +129,10 @@ a.footnote:hover{background-color: #888;text-decoration: none;}
 
 
 .gn-river{max-width:768px;margin:0 auto;}
-.panel-wrapper{position: relative;padding-top:25px;margin-top:25px;}
+.panel-wrapper{position: relative; margin:25px 0;}
 
-.span12 img{margin-bottom:15px;}
-
+/*.span12 img{margin-bottom:15px;}
+*/
 
 
 /* HAND-PLACED TEXT ELEMENTS */
@@ -180,7 +162,10 @@ a.footnote:hover{background-color: #888;text-decoration: none;}
 
 #come-on{
 	font-size:200px;
+	margin: 5px 0 0 0;
 }
+
+#quotes{padding-top:25px;margin-top:25px;}
 
 
 @media (max-width: 1000px){
