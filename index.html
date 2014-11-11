@@ -18,10 +18,16 @@
 
 
 {% block content %}
+	
 
-{% macro footnote(numeral) %}
-	<a class='footnote' href='#footnote{{ numeral }}'>{{ numeral }}</a>
+{% macro graphictext(id) %}
+	{{ keyona[id].blurb|process_text() }}
+	{% if keyona[id].footnote %}
+		<a class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
+	{% endif %}
 {% endmacro%}
+
+
 
 <div class="container-fluid graphic-novel-container">
 	<!-- <div class='advert-wrapper'>
@@ -34,26 +40,27 @@
 	<article id='keyona' class='graphic-novel'>
 
 		<h1 class='text-center'>Keyona<span class='white'>Laws</span></h1>
-		<h2 class='text-center'>Sub hede here here Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</h2>
+		<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
 		<div id='intro' class='panel-wrapper'>
 			<img class='text-center' src='img/keyona/day2-frame1.jpg' />
-			<p> Jason “Keyona” Laws Jr. was born 19 years ago to a drug-addicted mother on Chicago’s West Side.{{ footnote(1) }}</p>
+			<p class='white'>{{ graphictext('frame1') }}</p>
 		</div>
+		
 		<section class='gn-river'>
 			<div class='divider white'></div>
 			<div class='row-fluid'>
 				<div class='span5'>
 					<img class='border' src='img/keyona/day2-frame2.jpg' />
-					<p class='border-caption shift-up'>dhgklsdfhgkljfsdhgkjlfdshgdjkls</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame2') }}</p>
 				</div>
 				<div class='span7'>
 					<img class='border' src='img/keyona/day2-frame3.jpg' />
-					<p class='border-caption shift-up'>dhgklsdfhgkljfsdhgkjlfdshgdjkls</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame3') }}</p>
 				</div>
 			</div>
 			<div id='life-woman' class='panel-wrapper border'>
 				<img class='' src='img/keyona/day2-frame4.jpg' />
-				<p>As a youth, Laws told one juvenile court ofﬁcial of wanting to “live my life as a woman.”</p>
+				<p>{{ graphictext('frame4') }}</p>
 			</div>
 
 			<div id='placed-in-lawrence' class='panel-wrapper'>
@@ -62,13 +69,13 @@
 						<img class='border' src='img/keyona/day2-frame5.jpg' />
 					</div>
 					<div class='span6'>
-						<p class='border-caption'>In November 2011, when Laws was 15, a team of court and child welfare ofﬁcials placed her at the Lawrence Hall Youth Services residential facility at 4833 N. Francisco Ave. One section of the 48-bed facility is set aside for gay, bisexual and transgender youth, offering the teens “a safe, non-judgmental space to express themselves,” according to Lawrence Hall’s website.</p>
+						<p class='border-caption'>{{ graphictext('frame5') }}</p>
 					</div>
 				</div>
 			</div>
 			<div class='divider'></div>
 		</section>
-		<h2 class='text-center white'>Young toughs from the Lawrence Hall facility subjected Laws and other gay and transgender youth to bullying, harassment and assault</h2>
+		<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
 		<section class='gn-river'>
 			<div class='row-fluid'>
 				<div class='span3 hidden-phone'>{# EMPTY SPACER #}</div>
@@ -76,12 +83,12 @@
 					<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
 				</div>
 			</div>
-			<h2 id='come-on' class='white text-center'>COME ON!</h2>
-			<h2 class='text-center white'>Laws dropped her bag, put up her hands to ﬁght {{footnote(2) }}</h2>
+			<h2 id='come-on' class='white text-center'>{{ keyona.comeon.blurb }}</h2>
+			<h2 class='text-center white'>{{ graphictext('frame6b') }}</h2>
 			<div class='row-fluid'>
 				<div class='span12'>
 					<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
-					<p>One of the attackers rushed past the worker and he and Laws traded punches. Then the other “rushed in and began attacking,” said the facility's report to DCFS. The second boy “knocked Jason down on the ground and began to step on Jason’s face” before the worker was able to pull him away, the facility report said.</p>
+					<p>{{ graphictext('frame7') }}</p>
 				</div>
 			</div>
 			<div class='row-fluid'>
@@ -91,7 +98,7 @@
 				</div>
 			</div>
 			<div id='first-attempt' class='panel-wrapper'>
-				<p class='border-caption shift-down'>About four hours later, Laws made her ﬁrst attempt to run from the facility. Staff restrained Laws and persuaded her to stay in the building.</p>
+				<p class='border-caption shift-down'>{{ graphictext('frame9') }}</p>
 				<img class='border' src='img/keyona/day2-frame9.jpg' />
 			</div>
 
@@ -99,59 +106,59 @@
 				<div class='row-fluid'>
 					<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
 					<div class='span4'>
-						<h3>“It was supposed to be a safe haven for me. But it wasn’t. … The guys around us were always making us uncomfortable,” Laws said.</h3>
+						<h3>{{ graphictext('frame10a') }}</h3>
 					</div>
 					<div class='span2 hidden-phone'>{# EMPTY SPACER #}</div>
 					<div class='span4'>
-						<h3>“They should have kept us away from them. … Why would they put these boys directly across from us?”</h3>
+						<h3>{{ graphictext('frame10b') }}</h3>
 					</div>
 				</div>					
 				<img class='' src='img/keyona/day2-frame10.jpg' />
 			</div>
 			<div class='divider'></div>
-			<h2 class='white text-center'>Lawrence Hall reports to DCFS reveal open drug use at the facility, violent gang ﬁghts and rampant bullying of vulnerable kids, while staff appeared powerless to stop youth from leaving the facility for days or weeks at a time.</h2>
+			<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
 			<div class='row-fluid'>
 				<div class='span8'>
 					<img class='border' src='img/keyona/day2-frame11.jpg' />
-					<p class='border-caption shift-up'>“Client disregards staff attempts to redirect the behavior and continue(s) to pass the marijuana blunt around.”</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame11b') }}</p>
 				</div>
 				<div class='span4'>
 					<img class='border' src='img/keyona/day2-frame12.jpg' />
-					<p class='border-caption shift-up'>“(He) would often return with items that led staff to believe he was breaking into cars. He once returned with a BB gun in his waistband that he stated he was going to use to rob people.”</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame12') }}</p>
 				</div>
 			</div>
 			<div class='row-fluid'>
 				<div class='span6'>
 					<img class='border ' src='img/keyona/day2-frame13.jpg' />
-					<p>“He continued to repeat the hold and punching behaviors from 8:40 p.m. until 9:30 p.m. ... He chased his peer into a corner and pounded on him until the peer broke free. Then he chased him behind the desk and pounded on him some more. He refused to comply with directives to stop the behavior.”</p>
+					<p>{{ graphictext('frame13') }}</p>
 
 				</div>
 				<div class='span6'>
 					<img class='border ' src='img/keyona/day2-frame14a.jpg' />
-					<p>A typical facility incident report came on Dec. 19 at 10:20 p.m.: Laws went to her room claiming she was going to bed. Instead, she ran down the back stairs and out of the building. “The client ran to the bridge, heading west on Lawrence Avenue,” the facility’s report to DCFS said.</p>
+					<p>{{ graphictext('frame14a') }}</p>
 				</div>
 			</div>
 			<img class='border slim' src='img/keyona/day2-frame14b.jpg' />
 			<div class='divider'></div>
 			<div class='panel-wrapper'>
-				<p class='border-caption shift-down shift-left'>“A lot of the transgender go into the street to prostitute. I did it. We used to go to Boystown and out on the West Side, wherever we thought there would be money, that would be where we would go.”</p>
+				<p class='border-caption shift-down shift-left'>{{ graphictext('frame14b') }}</p>
 				<img class='border' src='img/keyona/day2-frame15.jpg' />
-				<p class='border-caption shift-up shift-right'>“We used to go out in below-zero weather to prostitute in the winter,” Laws said. “I had to do things I did not want to do. When you have to go prostitute in zero-degree weather, dealing with different men you are not attracted to. I don’t like serving different men.”</p>
+				<p class='border-caption shift-up shift-right'>{{ graphictext('frame15') }}</p>
 			</div>
 			<div class='row-fluid'>
 				<div class='span4'>
 					<img class='border' src='img/keyona/day2-frame16.jpg' />
-					<p class=''>One place they worked was at Lawrence and Kimball, near the facility. “I used to go there. I used to prostitute, stopping cars,” Laws said.</p>
+					<p class=''>{{ graphictext('frame16') }}</p>
 				</div>
 				<div class='span8'>
 					<img class='border' src='img/keyona/day2-frame17.jpg' />
-					<p class='border-caption shift-up'>DCFS and Lawrence Hall provided a small weekly allowance — but it wasn’t enough even to get her hair done, Laws said.</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame17') }}</p>
 				</div>
 			</div>
 			<div class='row-fluid'>
 				<div class='span12'>
 					<img class='border' src='img/keyona/day2-frame18.jpg' />
-					<p class='border-caption shift-up'>“The staff used to hear us talk about it all the time. Staff knew what we were doing. We used to talk about it,” Laws said. Once when Laws and a peer were sitting in the day room, a Lawrence Hall worker asked how much they earned in a night. When they told her, the worker said: “If I was out there, I could have made twice that,” Laws recalled.</p>
+					<p class='border-caption shift-up'>{{ graphictext('frame18') }}</p>
 				</div>
 			</div>
 
@@ -160,14 +167,12 @@
 					<img class='border' src='img/keyona/day2-frame19.jpg' />
 				</div>
 				<div class='span8'>
-					<h3 class='white'>“I knew about prostituting before I got to Lawrence Hall. But I wanted to make a change in my life. At Lawrence Hall, I got pushed back into prostituting.”</h3>
-					<h3 class='white'>
-						“No kid who is a ward of the state should be out here prostituting …” Laws said.</h3>
+					<h3 class='white'>{{ graphictext('frame19a') }}</h3>
+					<h3 class='white'>{{ graphictext('frame19b') }}</h3>
 					</div>
 				</div>
 			</section>
-			<h2 class='white text-center'>Laws stayed in Lawrence Hall for roughly two months until January 2012, when she ﬁnally ran away for good. Today, she is trying to get her GED. She hopes to attend college and get her life on track.</h2>
-			<h2 class='text-center'>“Kids at Lawrence Hall are still out there prostituting. They go all over the city of Chicago.”</h2>
+			<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
 			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
 
 			<section class='footnotes texst-center'>
