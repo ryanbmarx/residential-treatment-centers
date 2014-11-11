@@ -18,13 +18,13 @@
 
 
 {% block content %}
-	
+
 
 {% macro graphictext(id) %}
-	{{ keyona[id].blurb|process_text() }}
-	{% if keyona[id].footnote %}
-		<a class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
-	{% endif %}
+{{ keyona[id].blurb|process_text() }}
+{% if keyona[id].footnote %}
+<a class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
+{% endif %}
 {% endmacro%}
 
 
@@ -102,7 +102,7 @@
 				<img class='border' src='img/keyona/day2-frame9.jpg' />
 			</div>
 
-			<div class='panel-wrapper bg-white'>
+			<div class='panel-wrapper bg-white' id='quotes'>
 				<div class='row-fluid'>
 					<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
 					<div class='span4'>
@@ -127,20 +127,22 @@
 					<p class='border-caption shift-up'>{{ graphictext('frame12') }}</p>
 				</div>
 			</div>
-			<div class='row-fluid'>
-				<div class='span6'>
-					<img class='border ' src='img/keyona/day2-frame13.jpg' />
-					<p>{{ graphictext('frame13') }}</p>
+			<div class='panel-wrapper'>
+				<div class='row-fluid'>
+					<div class='span6'>
+						<img class='border ' src='img/keyona/day2-frame13.jpg' />
+						<p>{{ graphictext('frame13') }}</p>
 
-				</div>
-				<div class='span6'>
-					<img class='border ' src='img/keyona/day2-frame14a.jpg' />
-					<p>{{ graphictext('frame14a') }}</p>
+					</div>
+					<div class='span6'>
+						<img class='border ' src='img/keyona/day2-frame14a.jpg' />
+						<p>{{ graphictext('frame14a') }}</p>
+					</div>
 				</div>
 			</div>
 			<img class='border slim' src='img/keyona/day2-frame14b.jpg' />
 			<div class='divider'></div>
-			<div class='panel-wrapper'>
+			<div id='prostituion-start' class='panel-wrapper'>
 				<p class='border-caption shift-down shift-left'>{{ graphictext('frame14b') }}</p>
 				<img class='border' src='img/keyona/day2-frame15.jpg' />
 				<p class='border-caption shift-up shift-right'>{{ graphictext('frame15') }}</p>
@@ -155,20 +157,23 @@
 					<p class='border-caption shift-up'>{{ graphictext('frame17') }}</p>
 				</div>
 			</div>
-			<div class='row-fluid'>
-				<div class='span12'>
-					<img class='border' src='img/keyona/day2-frame18.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame18') }}</p>
-				</div>
-			</div>
+			<div class='panel-wrapper'>
+				<div class='row-fluid'>
+					<div class='span12'>
+						<img class='border' src='img/keyona/day2-frame18.jpg' />
+						<p class='border-caption shift-up'>{{ graphictext('frame18') }}</p>
+					</div>
+				</div></div>
+				<div class='panel-wrapper'>
 
-			<div class='row-fluid'>
-				<div class='span4'>
-					<img class='border' src='img/keyona/day2-frame19.jpg' />
-				</div>
-				<div class='span8'>
-					<h3 class='white'>{{ graphictext('frame19a') }}</h3>
-					<h3 class='white'>{{ graphictext('frame19b') }}</h3>
+					<div class='row-fluid'>
+						<div class='span4'>
+							<img class='border' src='img/keyona/day2-frame19.jpg' />
+						</div>
+						<div class='span8'>
+							<h3 class='white'>{{ graphictext('frame19a') }}</h3>
+							<h3 class='white'>{{ graphictext('frame19b') }}</h3>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -180,9 +185,9 @@
 				<h2 class='text-center'>Footnotes</h2>
 				{% set chapter = 'keyona' %}
 				<ul class='unstyled'>
-					{% for row in footnotes if row.novel == chapter %}
+					{% for row in keyona if row.footnote %}
 					<li id='footnote{{ row.numeral }}'>
-						<p class='text-center'><strong>{{ row.numeral }}. </strong>{{ row.note }}</p>
+						<p class='text-center'><strong>{{ row.foot_numeral }}. </strong>{{ row.footnote }}</p>
 					</li>	
 					{% endfor %}
 				</ul>	
