@@ -131,9 +131,6 @@ p.border-caption{
 .gn-river{max-width:768px;margin:0 auto;}
 .panel-wrapper{position: relative; margin:25px 0;}
 
-/*.span12 img{margin-bottom:15px;}
-*/
-
 
 /* HAND-PLACED TEXT ELEMENTS */
 
@@ -174,7 +171,14 @@ p.border-caption{
 
 @media (max-width: 768px) {
 	.advert-wrapper.right{float:none; margin: 25px 0;}
-	body{background-color:red};
+	p.border-caption{margin-bottom:15px;}
+	#quotes{padding:0;}
+	#quotes h3{text-align: center;padding:25px 15px;}
+	#DCFS-take{margin-top:-25px;}
+	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
+	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
+	.span12 .border-caption.shift-up{margin-top:-8px; }
+
 }
 
 @media (max-width: 400px) {
