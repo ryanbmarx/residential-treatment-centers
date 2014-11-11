@@ -135,11 +135,18 @@ p.border-caption{
 /* HAND-PLACED TEXT ELEMENTS */
 
 #intro p{
-	position:absolute;
+	/*position:absolute;
 	top:150px;
-	left:550px;
-	max-width: 320px;
+	left:550px;*/
+	/*max-width: 320px;*/
 	color:white;
+}
+
+#intro > div{
+	max-width: 320px;
+	position:absolute;
+	top:00px;
+	left:550px;
 }
 
 #life-woman{
