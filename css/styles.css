@@ -91,6 +91,7 @@ a.footnote:hover{background-color: #333;text-decoration: none;}
 .white a.footnote:hover{background-color: #E1E8FB;}
 
 
+
 .graphic-novel .divider {
 	background: url('../img/rule-horiz.png') #62A5EF center -5px no-repeat;
 	height: 8px;
@@ -101,7 +102,7 @@ a.footnote:hover{background-color: #333;text-decoration: none;}
 	background: url('../img/rule-horiz.png') #62A5EF center -19px no-repeat;
 }
 
-.graphic-novel .white{color:#fff;}
+.graphic-novel .white a, .graphic-novel .white{color:#fff;}
 .bg-white{background-color:#fff;}
 
 .graphic-novel img{width:100%;max-width: 800px;}
@@ -110,7 +111,8 @@ a.footnote:hover{background-color: #333;text-decoration: none;}
 
 .border{border:2px solid black;}
 
-p.border-caption{
+
+div.border-caption, p.border-caption{
 	padding: 15px;
 	background-color: #fff;
 	border: 2px solid black;
@@ -134,43 +136,11 @@ p.border-caption{
 
 /* HAND-PLACED TEXT ELEMENTS */
 
-#intro p{
-	/*position:absolute;
-	top:150px;
-	left:550px;*/
-	/*max-width: 320px;*/
-	color:white;
-}
-
-#intro > div{
-	max-width: 320px;
-	position:absolute;
-	top:00px;
-	left:550px;
-}
-
-#life-woman{
-	background-color: #81b8f1;
-	margin-top:25px;
-}
-
-
-#life-woman p{
-	position:absolute;
-	top:0px;
-	left:0px;
-	max-width: 320px;
-	padding:15px 0 0 15px;
-	font-size: 36px
-}
-
-#come-on{
-	font-size:200px;
-	margin: 5px 0 0 0;
-}
-
+#intro p{position:absolute;top:150px;left:550px;max-width: 320px;color:white;}
+#life-woman{background-color: #81b8f1;margin-top:25px;}
+#life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
+#come-on{font-size:200px;margin: 5px 0 0 0;}
 #quotes{padding-top:25px;margin-top:25px;}
-
 
 @media (max-width: 1000px){
 	.affix{top:0;}	
@@ -178,7 +148,7 @@ p.border-caption{
 
 @media (max-width: 768px) {
 	.advert-wrapper.right{float:none; margin: 25px 0;}
-	p.border-caption{margin-bottom:15px;}
+	div.border-caption, p.border-caption{margin-bottom:15px;}
 	#quotes{padding:0;}
 	#quotes h3{text-align: center;padding:25px 15px;}
 	#DCFS-take{margin-top:-25px;}
