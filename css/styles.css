@@ -86,9 +86,9 @@ a.footnote{
 	font-family: 'arial black', 'arial', sans-serif;
 	font-weight: bolder;
 }
-a.footnote:hover{background-color: #333;text-decoration: none;}
-.white a.footnote{color:#62A5EF;background-color: #fff;}
-.white a.footnote:hover{background-color: #E1E8FB;}
+.graphic-novel a.footnote:hover{background-color: #333;text-decoration: none;}
+.graphic-novel .white a.footnote{color:#62A5EF;background-color: #fff;}
+.graphic-novel .white a.footnote:hover{background-color: #E1E8FB;}
 
 
 
