@@ -123,6 +123,8 @@ div.border-caption, p.border-caption{
 	z-index: 100;
 }
 
+div.border-caption { position: relative; }
+
 .border-caption.shift-up{margin-top:-20px; }
 .span12 .border-caption.shift-up{margin-top:-40px; }
 .border-caption.shift-down{margin-bottom:-20px;}
