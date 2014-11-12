@@ -148,6 +148,17 @@ div.border-caption, p.border-caption{
 #day3.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #57A34C center -19px no-repeat;}
 .panel-wrapper{padding:20px;background-color: #fff}
 
+
+
+.social-menu{display:block;padding-left:0;margin:20px 0 0}
+.social-menu li{display:inline-block;width:40px;height:20px;font-size:20px}
+.social-menu li a{color:#2b2b2b}
+.social-menu li a:hover,.social-menu li a:active{color:#d0d0d0;text-decoration:none}
+.social-menu li a:hover>.nguxicon-facebook,.social-menu li a:active>.nguxicon-facebook{color:#144a7c}
+.social-menu li a:hover>.nguxicon-twitter,.social-menu li a:active>.nguxicon-twitter{color:#549ac4}
+
+
+
 @media (max-width: 1000px){
 	.affix{top:0;}	
 }
