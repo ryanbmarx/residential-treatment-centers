@@ -20,7 +20,6 @@
 
 {% block content %}
 
-
 {% macro graphictext(id) %}
 	{{ keyona[id].blurb|process_text() }}
 	{% if keyona[id].footnote %}
@@ -28,28 +27,23 @@
 	{% endif %}
 {% endmacro%}
 
-
-
-<div class="container-fluid graphic-novel-container">
-
-	<!-- <div class='advert-wrapper right'>
-		<div class='advert' data-ad-type='cube'></div>
-	</div> -->
-
+<div class="container-fluid">
 	<article id='keyona' class='graphic-novel'>
 		<div class='advert-wrapper'>
 			<div class='advert center' data-ad-type='leaderboard'></div>
 		</div>
-		<h1 class='text-center'>Keyona<span class='white'>Laws</span></h1>
+		<h1 class='text-center'>Keyona<span class='white'><br class='visible-phone' />Laws</span></h1>
 		<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
+		<div class='advert-wrapper visible-phone'>
+			<div class='advert' data-ad-type='cube'></div>
+		</div>
 		<div id='intro' class='panel-wrapper'>
 			<img class='text-center' src='img/keyona/day2-frame1.jpg' />
-			<p class='white hidden-phone'>{{ graphictext('frame1') }}</p>
+			<p class='white hidden-phone'>{{ graphictext('frame1') }}</p>			
 			<p class='border-caption shift-up visible-phone'>{{ graphictext('frame1') }}</p>
 		</div>
-		
 		<section class='gn-river'>
-			<div class='hidden-phone divider white'></div>
+			<div class='hidden-phone divider'></div>
 			<div class='row-fluid'>
 				<div class='span5'>
 					<img class='border' src='img/keyona/day2-frame2.jpg' />
@@ -119,7 +113,9 @@
 				<img class='' src='img/keyona/day2-frame10.jpg' />
 			</div>
 			<div class='divider'></div>
-			<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+		</section>
+		<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+		<section class='gn-river'>
 			<div class='row-fluid'>
 				<div class='span8'>
 					<img class='border' src='img/keyona/day2-frame11.jpg' />
@@ -164,51 +160,54 @@
 				<div class='row-fluid'>
 					<div class='span12'>
 						<img class='border' src='img/keyona/day2-frame18.jpg' />
-						<p class='border-caption shift-up'>{{ graphictext('frame18') }}</p>
+						<p class='border-caption shift-up shift-left'>{{ graphictext('frame18') }}</p>
 					</div>
-				</div></div>
-				<div class='panel-wrapper'>
+				</div>
+			</div>
+			<div class='panel-wrapper'>
 
-					<div class='row-fluid'>
-						<div class='span4'>
-							<img class='border' src='img/keyona/day2-frame19.jpg' />
-						</div>
-						<div class='span8'>
-							<h3 class='white text-center'>{{ graphictext('frame19a') }}</h3>
-							<h3 class='white text-center'>{{ graphictext('frame19b') }}</h3>
+				<div class='row-fluid'>
+					<div class='span4'>
+						<img class='border' src='img/keyona/day2-frame19.jpg' />
+					</div>
+					<div class='span8'>
+						<div class='border-caption'>
+							<h3 class=' text-center'>{{ graphictext('frame19a') }}</h3>
+							<h3 class=' text-center'>{{ graphictext('frame19b') }}</h3>
 						</div>
 					</div>
 				</div>
-			</section>
-			<div class='divider visible-phone'></div>
-			<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
-			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
+			</div>
+		</section>
+		<div class='divider visible-phone'></div>
+		<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
+		<img class='make-center' src='img/keyona/day2-frame20.jpg' />
 
-			<section class='footnotes texst-center'>
-				<div class='divider'></div>
-				<h2 class='text-center'>About this project</h2>
-				<p><em>{{ disclaimer }}</em></p>
-				<div class='divider'></div>
-				<h2 class='text-center'>Footnotes</h2>
-				{% set chapter = 'keyona' %}
-				<ul class='unstyled'>
-					<li id=''>
-						<p class='text-center'><strong>dfslkgjsdl;fgjfdskl;. </strong> <a class='return' href='#'>&raquo; RETURN &raquo;</a></p>
-					</li>
-					{% for row in keyona if row.footnote %}
-					<li id='footnote{{ row.numeral }}'>
-						<p class='text-center'><strong>{{ row.foot_numeral }}. </strong>{{ row.footnote }} <a class='return' href='#'>&raquo; RETURN</a></p>
-					</li>	
-					{% endfor %}
-				</ul>	
-			</section>
+		<section class='footnotes texst-center'>
+			<div class='divider'></div>
+			<h2 class='text-center'>About this project</h2>
+			<p><em>{{ disclaimer }}</em></p>
+			<div class='divider'></div>
+			<h2 class='text-center'>Footnotes</h2>
+			{% set chapter = 'keyona' %}
+			<ul class='unstyled'>
+				<li id=''>
+					<p class='text-center'><strong>dfslkgjsdl;fgjfdskl;. </strong> <a class='return' href='#'>&raquo; RETURN &raquo;</a></p>
+				</li>
+				{% for row in keyona if row.footnote %}
+				<li id='footnote{{ row.numeral }}'>
+					<p class='text-center'><strong>{{ row.foot_numeral }}. </strong>{{ row.footnote }} <a class='return' href='#{{ row.key }}-footnote'>&raquo; RETURN</a></p>
+				</li>	
+				{% endfor %}
+			</ul>	
+		</section>
 
-		</article>
+	</article>
 
-		<div class='credits'>
-			<p>{{ sources }}</p>
-			<p>{{ credits }}</p>
-		</div>
-		{# include '_facebook_comments.html' #}
+	<div class='credits'>
+		<p>{{ sources }}</p>
+		<p>{{ credits }}</p>
 	</div>
-	{% endblock content %}
+	{# include '_facebook_comments.html' #}
+</div>
+{% endblock content %}
