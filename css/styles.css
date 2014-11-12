@@ -120,6 +120,7 @@ div.border-caption, p.border-caption{
 	overflow-wrap: break-word;
 	display: block;
 	margin: 0 auto 0 auto;
+	z-index: 100;
 }
 
 .border-caption.shift-up{margin-top:-20px; }
@@ -143,10 +144,10 @@ div.border-caption, p.border-caption{
 #quotes{padding-top:25px;margin-top:25px;}
 
 
-/* SPECIAL FOR DAY 3 */
-#day3.graphic-novel .divider {background: url('../img/day3/rule-horiz.png') #57A34C center -5px no-repeat;}
-#day3.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #57A34C center -19px no-repeat;}
-.panel-wrapper{padding:20px;background-color: #fff}
+/* SPECIAL FOR INDIAN OAKS */
+#indianoaks.graphic-novel .divider {background: url('../img/day3/rule-horiz.png') #57A34C center -5px no-repeat;}
+#indianoaks.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #57A34C center -19px no-repeat;}
+#indianoaks .border-caption {box-shadow: 1px 1px 1px rgba(0,0,0,.3);}
 
 
 

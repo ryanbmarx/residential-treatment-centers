@@ -26,117 +26,138 @@ body{
 
 {% macro graphictext(id) %}
 {% if indianoaks[id].header %}
-	<h2>{{ indianoaks[id].header|process_text() }}</h2>
+<h2>{{ indianoaks[id].header|process_text() }}</h2>
 {% endif %}
 <p>{{ indianoaks[id].blurb|process_text() }}
-{% if indianoaks[id].footnote %}
-<a id ='{{ id }}-footnote'class='footnote' href='#' 'footnote{{ indianoaks[id].foot_numeral|int }}'>{{ indianoaks[id].foot_numeral|int }}</a></p>
-{% endif %}
-{% endmacro%}
+	{% if indianoaks[id].footnote %}
+	<a id ='{{ id }}-footnote'class='footnote' href='#' 'footnote{{ indianoaks[id].foot_numeral|int }}'>{{ indianoaks[id].foot_numeral|int }}</a></p>
+	{% endif %}
+	{% endmacro%}
 
-{# {{ graphictext('frame2') }} #}
+	{# {{ graphictext('frame2') }} #}
 
-<div class="container-fluid">
-	<article id='indianoaks' class='graphic-novel'>
-		<div class='advert-wrapper'>
-			<div class='advert center' data-ad-type='leaderboard'></div>
-		</div>
-		<div class='row-fluid'>
-			<div class='span8'>
-				<img class='' src='img/indianoaks/frame0b-d3.jpg' />
+	<div class="container-fluid">
+		<article id='indianoaks' class='graphic-novel'>
+			<div class='advert-wrapper'>
+				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
-			<div class='span4'>
-		<h1 class='text-center'>headline here<span class='white'><br class='visible-phone' />here</span></h1>
-		<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
+			<div class='row-fluid'>
+				<div class='span8'>
+					<img src='img/indianoaks/frame0b-d3.jpg' />
+				</div>
+				<div class='span4'>
+					<h1 class='text-center'>headline here<span class='white'><br class='visible-phone' />here</span></h1>
+					<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
 
-			</div>
-		</div>
-		
-		<div class='advert-wrapper visible-phone'>
-			<div class='advert' data-ad-type='cube'></div>
-		</div>
-		
-		<section class='gn-river'>
-			<div class='panel-wrapper'>
-				{{ graphictext('frame1a') }}
-				<img class='' src='img/indianoaks/frame1-d3.jpg' />
-				{{ graphictext('frame1b') }}
+				</div>
 			</div>
 
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame2-d3.jpg' />
-				{{ graphictext('frame2') }}
-				
-			</div>		
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame3-d3.jpg' />
-				{{ graphictext('frame3') }}
+			<div class='advert-wrapper visible-phone'>
+				<div class='advert' data-ad-type='cube'></div>
+			</div>
 
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame4-d3.jpg' />
-				{{ graphictext('frame4') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame5B-d3.jpg' />
-				{{ graphictext('frame5b') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame5-d3.jpg' />
-				{{ graphictext('frame5') }}
+			<section class='gn-river'>
+				<div class='panel-wrapper'>
+					<div class='border-caption shift-down shift-left'>
+						{{ graphictext('frame1a') }}
+					</div>
+					<img class='border' src='img/indianoaks/frame1-d3.jpg' />
+					<div class='border-caption shift-up shift-right'>
+						{{ graphictext('frame1b') }}
+					</div>
+				</div>
 
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame6-d3.jpg' />
-				{{ graphictext('frame6') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame7-d3.jpg' />
-				{{ graphictext('frame7') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame8-d3.jpg' />
-				{{ graphictext('frame8') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame9-d3.jpg' />
-				{{ graphictext('frame9') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame10-d3.jpg' />
-				{{ graphictext('frame10') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame11-d3.jpg' />
-				{{ graphictext('frame11') }}
-			</div>
-			<div class='panel-wrapper'>
-				<img class='' src='img/indianoaks/frame12-d3.jpg' />
-			</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame2-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame2') }}
+					</div>
+				</div>		
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame3-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame3') }}
+
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame4-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame4') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame5-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame5b') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame5B-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame5') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame6-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame6') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame7-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame7') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame8-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame8') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame9-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame9') }}
+					</div>
+
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame10-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame10') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame11-d3.jpg' />
+					<div class='border-caption shift-up'>
+						{{ graphictext('frame11') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame12-d3.jpg' />
+				</div>
+			</section>
+			<div class='divider visible-phone'></div>
+
+
+			<section class='footnotes text-center'>
+				{% include '_about-and-credits.html'%}
+				<h2 class='text-center'>Footnotes</h2>
+
+				<ul class='unstyled'>
+
+				{% for row in indianoaksfootnotes[1:] %}
+				<li id='footnote{{ row.numeral|int }}'>
+					<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
+				</li>	
+				{% endfor %}
+			</ul>	
 		</section>
-		<div class='divider visible-phone'></div>
 
+	</article>
 
-		<section class='footnotes text-center'>
-			{% include '_about-and-credits.html'%}
-			<h2 class='text-center'>Footnotes</h2>
-
-			{#		<ul class='unstyled'>
-
-			{% for row in indianoaksfootnotes[1:] %}
-			<li id='footnote{{ row.numeral|int }}'>
-				<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
-			</li>	
-			{% endfor %}
-		</ul>	#}
-	</section>
-
-</article>
-
-<div class='credits'>
-	<p>{{ sources }}</p>
-	<p>{{ credits }}</p>
-</div>
-{# include '_facebook_comments.html' #}
+	{# include '_facebook_comments.html' #}
 </div>
 {% endblock content %}
