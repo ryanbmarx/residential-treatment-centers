@@ -64,7 +64,7 @@ ul p, ol p{font-size: 16px}
 /* GRAPHIC NOVEL STYLES */
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
-body, .container-fluid.graphic-novel-container {background-color:#62A5EF;}
+
 
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
 font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
@@ -141,6 +141,12 @@ div.border-caption, p.border-caption{
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
 #come-on{font-size:200px;margin: 5px 0 0 0;}
 #quotes{padding-top:25px;margin-top:25px;}
+
+
+/* SPECIAL FOR DAY 3 */
+#day3.graphic-novel .divider {background: url('../img/day3/rule-horiz.png') #57A34C center -5px no-repeat;}
+#day3.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #57A34C center -19px no-repeat;}
+.panel-wrapper{padding:20px;background-color: #fff}
 
 @media (max-width: 1000px){
 	.affix{top:0;}	
