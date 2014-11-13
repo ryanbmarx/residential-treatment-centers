@@ -1,0 +1,29 @@
+{% if (og_description and og_image) or twitter_description %}
+<ul id="social-menu" >
+  {% if twitter_description %}
+  <li>
+    <a target="_blank" href="https://twitter.com/share?url={{ ROOT_URL }}/{{ PATH }}&text={{ twitter_description|urlencode }} http://{{ ROOT_URL }}/{{ PATH }}">
+      <i class="nguxicon-twitter"></i> <span class="hidden">Twitter</span>
+    </a>  
+  </li>
+  {% endif %}
+  {% if og_description and og_image %}
+  <li>
+    <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ ROOT_URL }}/{{ PATH }}&t={{ title|urlencode }}">
+      <i class="nguxicon-facebook"></i> <span class="hidden">Facebook</span>
+    </a>  
+  </li>
+  <li>
+    <a target="_blank" href="https://plus.google.com/share?url={{ ROOT_URL }}/{{ PATH }}">
+      <i class="nguxicon-gplus"></i> <span class="hidden">Google+</span>
+    </a>  
+  </li>
+  <li>
+    <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ ROOT_URL }}/{{ PATH }}&media={{ og_image }}&description={{ og_description|urlencode }}">
+      <i class="nguxicon-pintrest"></i> <span class="hidden">Pinterest</span>
+    </a>  
+  </li>
+  {% endif %}
+
+</ul>
+{% endif %}

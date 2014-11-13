@@ -1,10 +1,23 @@
 <div class='divider'></div>
 <h2 class='text-center'>About this project</h2>
 <p><em>{{ disclaimer }}</em></p>
+<h2 class='text-center'>Share</h2>
+{% include '_social-row.html' %}
 <div class='divider'></div>
 <h2>Credits</h2>
-<p>Illustrations by <span class='white'><a href='mailto:rtuma@chicagotribune.com'>Rick Tuma</a></span></a></p>
-<p>Design by<span class='white'> <a href='mailto:rymarx@chicagotribune.com'>Ryan Marx</a></span></p>
-<p>Writing and reporting by <span class='white'><a href='mailto:deldeib@tribune.com'>Duaa Eldeib</a></span>, <span class='white'><a href='mailto:dyjackson@tribune.com'>David Jackson</a></span> and <span class='white'><a href='mailto:gmarx@tribune.com'>Gary Marx</a></span></p>
-<p class='white'><a href='twitter.com/chitribgraphics' target='_blank'>@ChiTribGraphics</a></p>
+<p>Illustrations by 
+	<span class='white'><a href='mailto:{{ credits.rick.email }}'>{{ credits.rick.name}}</a></span></a>
+</p>
+<p>Design by
+	<span class='white'><a href='mailto:{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a></span></a>
+</p>
+<p>Writing and reporting by 
+	<span class='white'><a href='mailto:{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a></span>, 
+	<span class='white'><a href='mailto:{{ credits.david.email }}'>{{ credits.david.name}}</a></span> and 
+	<span class='white'><a href='mailto:{{ credits.gary.email }}'>{{ credits.gary.name}}</a></span>
+</p>
+<p class='white'>
+	<a href='http://twitter.com/chitribgraphics' target='_blank'>@ChiTribGraphics</a>
+</p>
 <div class='divider'></div>
+

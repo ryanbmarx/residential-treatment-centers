@@ -9,9 +9,9 @@
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <style type="text/css">
-	body{
-		background-color:#62A5EF;
-	}
+body{
+	background-color:#62A5EF;
+}
 </style>
 {% endblock %}
 
@@ -24,10 +24,10 @@
 {% block content %}
 
 {% macro graphictext(id) %}
-	{{ keyona[id].blurb|process_text() }}
-	{% if keyona[id].footnote %}
-		<a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}' 'footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
-	{% endif %}
+{{ keyona[id].blurb|process_text() }}
+{% if keyona[id].footnote %}
+<a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}' 'footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
+{% endif %}
 {% endmacro%}
 
 <div class="container-fluid">
@@ -35,6 +35,7 @@
 		<div class='advert-wrapper'>
 			<div class='advert center' data-ad-type='leaderboard'></div>
 		</div>
+		{% include '_social-row.html' %}
 		<h1 class='text-center'>Keyona<span class='white'><br class='visible-phone' />Laws</span></h1>
 		<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
 		<div class='advert-wrapper visible-phone'>
@@ -73,6 +74,30 @@
 					</div>
 				</div>
 			</div>
+			<div class='divider'></div>
+		</section>
+		<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+		<section class='gn-river'>
+			<div class='row-fluid'>
+				<div class='span8'>
+					<img class='border' src='img/keyona/day2-frame11.jpg' />
+					<p class='border-caption shift-up'>{{ graphictext('frame11b') }}</p>
+				</div>
+				<div class='span4'>
+					<img class='border' src='img/keyona/day2-frame12.jpg' />
+					<p class='border-caption shift-up'>{{ graphictext('frame12') }}</p>
+				</div>
+			</div>
+			<div class='panel-wrapper'>
+				<div class='row-fluid'>
+					<div class='span12'>
+						<img class='border ' src='img/keyona/day2-frame13.jpg' />
+						<p class='border-caption shift-up'>{{ graphictext('frame13') }}</p>
+
+					</div>
+				</div>
+			</div>
+
 			<div class='divider'></div>
 		</section>
 		<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
@@ -117,32 +142,19 @@
 			</div>
 			<div class='divider'></div>
 		</section>
-		<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+		<h2 class='white text-center'>{{ graphictext('frame11c') }}</h2>
 		<section class='gn-river'>
-			<div class='row-fluid'>
-				<div class='span8'>
-					<img class='border' src='img/keyona/day2-frame11.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame11b') }}</p>
-				</div>
-				<div class='span4'>
-					<img class='border' src='img/keyona/day2-frame12.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame12') }}</p>
-				</div>
-			</div>
 			<div class='panel-wrapper'>
 				<div class='row-fluid'>
 					<div class='span6'>
-						<img class='border ' src='img/keyona/day2-frame13.jpg' />
-						<p>{{ graphictext('frame13') }}</p>
-
+						<img class='border ' src='img/keyona/day2-frame14a.jpg' />
 					</div>
 					<div class='span6'>
-						<img class='border ' src='img/keyona/day2-frame14a.jpg' />
-						<p>{{ graphictext('frame14a') }}</p>
+						<img class='border' src='img/keyona/day2-frame14b.jpg' />
 					</div>
 				</div>
+				<p class='border-caption shift-up'>{{ graphictext('frame14a') }}</p>
 			</div>
-			<img class='border slim' src='img/keyona/day2-frame14b.jpg' />
 			<div class='divider'></div>
 			<div id='prostituion-start' class='panel-wrapper'>
 				<p class='border-caption shift-down shift-left'>{{ graphictext('frame14b') }}</p>
@@ -190,7 +202,6 @@
 			{% include '_about-and-credits.html'%}
 			<h2 class='text-center'>Footnotes</h2>
 			<ul class='unstyled'>
-	
 				{% for row in keyonafootnotes[1:] %}
 				<li id='footnote{{ row.numeral|int }}'>
 					<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
@@ -201,6 +212,6 @@
 
 	</article>
 
-	{# include '_facebook_comments.html' #}
+	{% include '_facebook_comments.html' %}
 </div>
 {% endblock content %}

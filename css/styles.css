@@ -63,9 +63,9 @@ ul p, ol p{font-size: 16px}
 
 /* GRAPHIC NOVEL STYLES */
 
+#comments{padding:20px;background:#fff;background: rgba(255, 255, 255, .7);margin-top:25px;}
+
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
-
-
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
 font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
 .graphic-novel h1{font-size: 120px;}
@@ -152,15 +152,55 @@ div.border-caption { position: relative; }
 #indianoaks .border-caption {box-shadow: 1px 1px 1px rgba(0,0,0,.3);}
 
 
+/* SOCIAL */
 
-.social-menu{display:block;padding-left:0;margin:20px 0 0}
-.social-menu li{display:inline-block;width:40px;height:20px;font-size:20px}
-.social-menu li a{color:#2b2b2b}
-.social-menu li a:hover,.social-menu li a:active{color:#d0d0d0;text-decoration:none}
-.social-menu li a:hover>.nguxicon-facebook,.social-menu li a:active>.nguxicon-facebook{color:#144a7c}
-.social-menu li a:hover>.nguxicon-twitter,.social-menu li a:active>.nguxicon-twitter{color:#549ac4}
+@font-face {font-family: 'trb_Icons'; font-style: normal;font-weight: normal;
+  src: url('//graphics.chicagotribune.com/fonts/trbicons.eot');
+  src: url('//graphics.chicagotribune.com/fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('//graphics.chicagotribune.com/fonts/trbicons.woff') format('woff'), url('//graphics.chicagotribune.com/fonts/trbicons.ttf') format('truetype');
+}
 
+[class^="nguxicon-"],
+[class*=" nguxicon-"] {
+  display: inline-block;
+  font-family: trb_Icons;
+  font-size: 120%;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  text-transform: none;
+  vertical-align: text-bottom;
+}
+.nguxicon-pintrest:before {content: "b";}
+.nguxicon-facebook:before {content: "f";}
+.nguxicon-gplus:before {content: "g";}
+.nguxicon-linkedin:before {content: "i";}
+.nguxicon-twitter:before {content: "t";}
 
+#social-menu{
+	float:none;
+	display:block;
+	max-width: 320px;
+	margin:0 auto 25px auto;
+	padding: 15px;
+/*	border-bottom: 1px solid white;
+*/	text-align: center;
+}
+
+.footnotes #social-menu{border-bottom:none;}
+
+#social-menu li a{
+	color: #fff;
+	opacity:.5;
+}
+
+#social-menu li a:hover{
+	color: #fff;
+	opacity:1;
+}
+
+#social-menu li {
+	display: inline-block;
+}
 
 @media (max-width: 1000px){
 	.affix{top:0;}	
