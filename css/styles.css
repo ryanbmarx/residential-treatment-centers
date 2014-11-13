@@ -121,20 +121,6 @@ a.footnote{
 
 .border{border:2px solid black;}
 
-
-/*div.border-caption, p.border-caption{
-	padding: 15px;
-	background-color: #fff;
-	border: 2px solid black;
-	width: 80%;
-	overflow-wrap: break-word;
-	display: block;
-	margin: 0 auto 0 auto;
-	z-index: 100;
-}
-
-*/
-
 div.border-caption {
 	border-left: 2px solid black;
 	border-right: 2px solid black;
@@ -256,6 +242,7 @@ div.border-caption {
 	#life-woman{padding-top:0;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
 	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
+	#come-on {font-size: 160px;}
 	.span12 .border-caption.shift-up{margin-top:-8px; }
 
 }
