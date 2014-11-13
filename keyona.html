@@ -7,7 +7,7 @@
 
 {% block css %}
 
-<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css?gjhkdlfghdfkjh">
 <style type="text/css">
 body{
 	background-color:#62A5EF;
@@ -23,195 +23,233 @@ body{
 
 {% block content %}
 
-{% macro graphictext(id) %}
+{% macro graphictext(id, border_caption, classes) %}
+
+{% if border_caption == "true" %}
+{############################################################}
+{#
+{#	HOW TO USE THIS MACRO:
+{#	{{ graphictext('reference ID', 'true/false' (apply border caption?) , '(ANY CLASSES YOU WANT)') }}
+{#
+{############################################################}
+<div class='border-caption {{ classes }}' style=''>
+	<span class='top-border'></span>
+	<p class='' style=''>
+		{{ keyona[id].blurb|process_text() }}
+		{% if keyona[id].footnote %}
+		<a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}' 'footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
+		{% endif %}
+	</p>
+	<span class='bottom-border'></span>
+</div>
+{% else %}
 {{ keyona[id].blurb|process_text() }}
 {% if keyona[id].footnote %}
 <a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ keyona[id].foot_numeral|int }}' 'footnote{{ keyona[id].foot_numeral|int }}'>{{ keyona[id].foot_numeral|int }}</a>
 {% endif %}
+{% endif %}
+
+
 {% endmacro%}
 
-<div class="container-fluid">
-	<article id='keyona' class='graphic-novel'>
-		<div class='advert-wrapper'>
-			<div class='advert center' data-ad-type='leaderboard'></div>
-		</div>
-		{% include '_social-row.html' %}
-		<h1 class='text-center'>Keyona<span class='white'><br class='visible-phone' />Laws</span></h1>
-		<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
-		<div class='advert-wrapper visible-phone'>
-			<div class='advert' data-ad-type='cube'></div>
-		</div>
-		<div id='intro' class='panel-wrapper'>
-			<img class='text-center' src='img/keyona/day2-frame1.jpg' />
-			<p class='white hidden-phone'>{{ graphictext('frame1') }}</p>			
-			<p class='border-caption shift-up visible-phone'>{{ graphictext('frame1') }}</p>
-		</div>
-		<section class='gn-river'>
-			<div class='hidden-phone divider'></div>
-			<div class='row-fluid'>
-				<div class='span5'>
-					<img class='border' src='img/keyona/day2-frame2.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame2') }}</p>
-				</div>
-				<div class='span7'>
-					<img class='border' src='img/keyona/day2-frame3.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame3') }}</p>
-				</div>
-			</div>
-			<div id='life-woman' class='panel-wrapper border'>
-				<p>{{ graphictext('frame4') }}</p>
-				<img class='' src='img/keyona/day2-frame4.jpg' />
+	<style type="text/css">
+	
 
-			</div>
+	</style>
 
-			<div id='placed-in-lawrence' class='panel-wrapper'>
-				<div class='row-fluid'>
-					<div class='span6'>
-						<img class='border' src='img/keyona/day2-frame5.jpg' />
-					</div>
-					<div class='span6'>
-						<p id ='DCFS-take' class='border-caption'>{{ graphictext('frame5') }}</p>
-					</div>
-				</div>
+	<div class="container-fluid">
+		<article id='keyona' class='graphic-novel'>
+			<div class='advert-wrapper'>
+				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
-			<div class='divider'></div>
-		</section>
-		<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
-		<section class='gn-river'>
-			<div class='row-fluid'>
-				<div class='span8'>
-					<img class='border' src='img/keyona/day2-frame11.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame11b') }}</p>
-				</div>
-				<div class='span4'>
-					<img class='border' src='img/keyona/day2-frame12.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame12') }}</p>
-				</div>
+			{% include '_social-row.html' %}
+			<h1 class='text-center'>Keyona<span class='white'><br class='visible-phone' />Laws</span></h1>
+			<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
+			<div class='advert-wrapper visible-phone'>
+				<div class='advert' data-ad-type='cube'></div>
 			</div>
-			<div class='panel-wrapper'>
+			<div id='intro' class='panel-wrapper'>
+				<img class='text-center' src='img/keyona/day2-frame1.jpg' />
+				<p class='white hidden-phone'>{{ graphictext('frame1') }}</p>			
+				<p class='border-caption shift-up visible-phone'>{{ graphictext('frame1') }}</p>
+			</div>
+			<section class='gn-river'>
+				<div class='hidden-phone divider'></div>
 				<div class='row-fluid'>
-					<div class='span12'>
-						<img class='border ' src='img/keyona/day2-frame13.jpg' />
-						<p class='border-caption shift-up'>{{ graphictext('frame13') }}</p>
+					<div class='span5'>
+						<img class='border' src='img/keyona/day2-frame2.jpg' />
+						<div class=''>{{ graphictext('frame2', 'true', 'shift-up') }}</div>
+					</div>
+					<div class='span7'>
+						<img class='border' src='img/keyona/day2-frame3.jpg' />
+						{{ graphictext('frame3', 'true', 'shift-up') }}
+					</div>
+				</div>
+				<div id='life-woman' class='panel-wrapper border'>
+					<p>{{ graphictext('frame4') }}</p>
+					<img class='' src='img/keyona/day2-frame4.jpg' />
 
-					</div>
 				</div>
-			</div>
 
-			<div class='divider'></div>
-		</section>
-		<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
-		<section class='gn-river'>
-			<div class='row-fluid'>
-				<div class='span3 hidden-phone'>{# EMPTY SPACER #}</div>
-				<div class='span6'>
-					<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
-				</div>
-			</div>
-			<h2 id='come-on' class='white text-center'>{{ keyona.comeon.blurb }}</h2>
-			<h2 class='text-center white'>{{ graphictext('frame6b') }}</h2>
-			<div class='row-fluid'>
-				<div class='span12'>
-					<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
-					<p>{{ graphictext('frame7') }}</p>
-				</div>
-			</div>
-			<div class='row-fluid'>
-				<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
-				<div class='span10'>
-					<img class='text-center' src='img/keyona/day2-frame8.jpg' />
-				</div>
-			</div>
-			<div id='first-attempt' class='panel-wrapper'>
-				<p class='border-caption shift-down'>{{ graphictext('frame9') }}</p>
-				<img class='border' src='img/keyona/day2-frame9.jpg' />
-			</div>
-
-			<div class='panel-wrapper bg-white' id='quotes'>
-				<div class='row-fluid'>
-					<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
-					<div class='span4'>
-						<h3>{{ graphictext('frame10a') }}</h3>
-					</div>
-					<div class='span2 hidden-phone'>{# EMPTY SPACER #}</div>
-					<div class='span4'>
-						<h3>{{ graphictext('frame10b') }}</h3>
-					</div>
-				</div>					
-				<img class='' src='img/keyona/day2-frame10.jpg' />
-			</div>
-			<div class='divider'></div>
-		</section>
-		<h2 class='white text-center'>{{ graphictext('frame11c') }}</h2>
-		<section class='gn-river'>
-			<div class='panel-wrapper'>
-				<div class='row-fluid'>
-					<div class='span6'>
-						<img class='border ' src='img/keyona/day2-frame14a.jpg' />
-					</div>
-					<div class='span6'>
-						<img class='border' src='img/keyona/day2-frame14b.jpg' />
-					</div>
-				</div>
-				<p class='border-caption shift-up'>{{ graphictext('frame14a') }}</p>
-			</div>
-			<div class='divider'></div>
-			<div id='prostituion-start' class='panel-wrapper'>
-				<p class='border-caption shift-down shift-left'>{{ graphictext('frame14b') }}</p>
-				<img class='border' src='img/keyona/day2-frame15.jpg' />
-				<p class='border-caption shift-up shift-right'>{{ graphictext('frame15') }}</p>
-			</div>
-			<div class='row-fluid'>
-				<div class='span4'>
-					<img class='border' src='img/keyona/day2-frame16.jpg' />
-					<p class=''>{{ graphictext('frame16') }}</p>
-				</div>
-				<div class='span8'>
-					<img class='border' src='img/keyona/day2-frame17.jpg' />
-					<p class='border-caption shift-up'>{{ graphictext('frame17') }}</p>
-				</div>
-			</div>
-			<div class='panel-wrapper'>
-				<div class='row-fluid'>
-					<div class='span12'>
-						<img class='border' src='img/keyona/day2-frame18.jpg' />
-						<p class='border-caption shift-up shift-left'>{{ graphictext('frame18') }}</p>
-					</div>
-				</div>
-			</div>
-			<div class='panel-wrapper'>
-
-				<div class='row-fluid'>
-					<div class='span4'>
-						<img class='border' src='img/keyona/day2-frame19.jpg' />
-					</div>
-					<div class='span8'>
-						<div class='border-caption'>
-							<h3 class=' text-center'>{{ graphictext('frame19a') }}</h3>
-							<h3 class=' text-center'>{{ graphictext('frame19b') }}</h3>
+				<div id='placed-in-lawrence' class='panel-wrapper'>
+					<div class='row-fluid'>
+						<div class='span6'>
+							<img class='border' src='img/keyona/day2-frame5.jpg' />
+						</div>
+						<div class='span6'>
+							{{ graphictext('frame3', 'true', '') }}
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<div class='divider visible-phone'></div>
-		<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
-		<img class='make-center' src='img/keyona/day2-frame20.jpg' />
+				<div class='divider'></div>
+			</section>
+			<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+			<section class='gn-river'>
+				<div class='row-fluid'>
+					<div class='span8'>
+						<img class='border' src='img/keyona/day2-frame11.jpg' />
+						{{ graphictext('frame11b', 'true', 'shift-up') }}
+					</div>
+					<div class='span4'>
+						<img class='border' src='img/keyona/day2-frame12.jpg' />
+						{{ graphictext('frame12', 'true', 'shift-up') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<div class='row-fluid'>
+						<div class='span12'>
+							<img class='border ' src='img/keyona/day2-frame13.jpg' />
+							{{ graphictext('frame13', 'true', 'shift-up') }}
+						</div>
+					</div>
+				</div>
 
-		<section class='footnotes text-center'>
-			{% include '_about-and-credits.html'%}
-			<h2 class='text-center'>Footnotes</h2>
-			<ul class='unstyled'>
-				{% for row in keyonafootnotes[1:] %}
-				<li id='footnote{{ row.numeral|int }}'>
-					<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
-				</li>	
-				{% endfor %}
-			</ul>	
-		</section>
+				<div class='divider'></div>
+			</section>
+			<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
+			<section class='gn-river'>
+				<div class='row-fluid'>
+					<div class='span3 hidden-phone'>{# EMPTY SPACER #}</div>
+					<div class='span6'>
+						<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
+					</div>
+				</div>
+				<h2 id='come-on' class='white text-center'>{{ keyona.comeon.blurb }}</h2>
+				<h2 class='text-center white'>{{ graphictext('frame6b') }}</h2>
+				<div class='row-fluid'>
+					<div class='span12'>
+						<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
+						<p>{{ graphictext('frame7') }}</p>
+					</div>
+				</div>
+				<div class='row-fluid'>
+					<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
+					<div class='span10'>
+						<img class='text-center' src='img/keyona/day2-frame8.jpg' />
+					</div>
+				</div>
+				<div id='first-attempt' class='panel-wrapper'>
+					{{ graphictext('frame9', 'true', 'shift-down') }}
+					<img class='border' src='img/keyona/day2-frame9.jpg' />
+				</div>
 
-	</article>
+				<div class='panel-wrapper bg-white' id='quotes'>
+					<div class='row-fluid'>
+						<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
+						<div class='span4'>
+							<h3>{{ graphictext('frame10a') }}</h3>
+						</div>
+						<div class='span2 hidden-phone'>{# EMPTY SPACER #}</div>
+						<div class='span4'>
+							<h3>{{ graphictext('frame10b') }}</h3>
+						</div>
+					</div>					
+					<img class='' src='img/keyona/day2-frame10.jpg' />
+				</div>
+				<div class='divider'></div>
+			</section>
+			<h2 class='white text-center'>{{ graphictext('frame11c') }}</h2>
+			<section class='gn-river'>
+				<div class='panel-wrapper'>
+					<div class='row-fluid'>
+						<div class='span6'>
+							<img class='border ' src='img/keyona/day2-frame14a.jpg' />
+						</div>
+						<div class='span6'>
+							<img class='border' src='img/keyona/day2-frame14b.jpg' />
+						</div>
+					</div>
+					{{ graphictext('frame14a', 'true', 'shift-up') }}
+				</div>
+				<div class='divider'></div>
+				<div id='prostitution-start' class='panel-wrapper'>
+					{{ graphictext('frame14b', 'true', 'shift-down shift-left') }}
+					<img class='border' src='img/keyona/day2-frame15.jpg' />
+					{{ graphictext('frame15', 'true', 'shift-up shift-right') }}
+				</div>
+				<div class='row-fluid'>
+					<div class='span4'>
+						<img class='border' src='img/keyona/day2-frame16.jpg' />
+						<p class=''>{{ graphictext('frame16') }}</p>
+					</div>
+					<div class='span8'>
+						<img class='border' src='img/keyona/day2-frame17.jpg' />
+						{{ graphictext('frame17', 'true', 'shift-up') }}
+					</div>
+				</div>
+				<div class='panel-wrapper'>
+					<div class='row-fluid'>
+						<div class='span12'>
+							<img class='border' src='img/keyona/day2-frame18.jpg' />
+							{{ graphictext('frame18', 'true', 'shift-up shift-left') }}
+						</div>
+					</div>
+				</div>
+				<div class='panel-wrapper'>
 
-	{% include '_facebook_comments.html' %}
-</div>
-{% endblock content %}
+					<div class='row-fluid'>
+						<div class='span4'>
+							<img class='border' src='img/keyona/day2-frame19.jpg' />
+						</div>
+						<div class='span8'>
+							<div id='penultimate-quotes'>
+								<div class='border-caption' style=''>
+									<span class='top-border'></span>
+									<p class='' style=''>
+										<h3 class=' text-center'>{{ graphictext('frame19a') }}</h3>
+									</p>
+									<span class='bottom-border'></span>
+								</div>
+								<div class='border-caption' style=''>
+									<span class='top-border'></span>
+									<p class='' style=''>
+										<h3 class=' text-center'>{{ graphictext('frame19b') }}</h3>
+									</p>
+									<span class='bottom-border'></span>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class='divider visible-phone'></div>
+			<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
+			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
+
+			<section class='footnotes text-center'>
+				{% include '_about-and-credits.html'%}
+				<h2 class='text-center'>Footnotes</h2>
+				<ul class='unstyled'>
+					{% for row in keyonafootnotes[1:] %}
+					<li id='footnote{{ row.numeral|int }}'>
+						<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
+					</li>	
+					{% endfor %}
+				</ul>	
+			</section>
+
+		</article>
+
+		{% include '_facebook_comments.html' %}
+	</div>
+	{% endblock content %}

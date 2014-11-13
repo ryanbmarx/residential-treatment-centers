@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'trashhandregular';
     src: url('TrashHand-webfont.eot');
     src: url('TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
@@ -9,6 +9,16 @@
     font-style: normal;
 
 }
+*/
+
+/*@font-face {font-family: 'CCMoritat-Heavy';src: url('webfonts/2C9497_0_0.eot');src: url('webfonts/2C9497_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_0_0.woff2') format('woff2'),url('webfonts/2C9497_0_0.woff') format('woff'),url('webfonts/2C9497_0_0.ttf') format('truetype');}*/
+@font-face {font-family: 'CCMoritat-BoldItalic';src: url('webfonts/2C9497_1_0.eot');src: url('webfonts/2C9497_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_1_0.woff2') format('woff2'),url('webfonts/2C9497_1_0.woff') format('woff'),url('webfonts/2C9497_1_0.ttf') format('truetype');}
+/*@font-face {font-family: 'CCMoritat-Bold';src: url('webfonts/2C9497_2_0.eot');src: url('webfonts/2C9497_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_2_0.woff2') format('woff2'),url('webfonts/2C9497_2_0.woff') format('woff'),url('webfonts/2C9497_2_0.ttf') format('truetype');}
+@font-face {font-family: 'CCMoritat-Italic';src: url('webfonts/2C9497_3_0.eot');src: url('webfonts/2C9497_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_3_0.woff2') format('woff2'),url('webfonts/2C9497_3_0.woff') format('woff'),url('webfonts/2C9497_3_0.ttf') format('truetype');}*/
+@font-face {font-family: 'CCMoritat';src: url('webfonts/2C9497_4_0.eot');src: url('webfonts/2C9497_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_4_0.woff2') format('woff2'),url('webfonts/2C9497_4_0.woff') format('woff'),url('webfonts/2C9497_4_0.ttf') format('truetype');}
+/*@font-face {font-family: 'CCMoritat-HeavyItalic';src: url('webfonts/2C9497_5_0.eot');src: url('webfonts/2C9497_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_5_0.woff2') format('woff2'),url('webfonts/2C9497_5_0.woff') format('woff'),url('webfonts/2C9497_5_0.ttf') format('truetype');}*/
+@font-face {font-family: 'trb_Icons'; font-style: normal;font-weight: normal;src: url('//graphics.chicagotribune.com/fonts/trbicons.eot');src: url('//graphics.chicagotribune.com/fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('//graphics.chicagotribune.com/fonts/trbicons.woff') format('woff'), url('//graphics.chicagotribune.com/fonts/trbicons.ttf') format('truetype');}
+
 
 /* OTHER STUFF */
 .hide{display:none}
@@ -67,11 +77,11 @@ ul p, ol p{font-size: 16px}
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
-font-family: 'trashhandregular', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
-.graphic-novel h1{font-size: 120px;}
+font-family: 'CCMoritat', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
+.graphic-novel h1{font-size: 120px;font-family:'CCMoritat-BoldItalic';margin-bottom:15px;}
 .graphic-novel h2{font-size: 42px;margin-bottom: .5em;}
 .graphic-novel h3{font-size: 30px;}
-.graphic-novel p{font-size: 24px;line-height: 1.1em;margin:10px 0 20px 0;}
+.graphic-novel p{font-size: 24px;line-height: 1.2em;margin:10px 0 20px 0;}
 
 
 a.footnote{
@@ -112,7 +122,7 @@ a.footnote{
 .border{border:2px solid black;}
 
 
-div.border-caption, p.border-caption{
+/*div.border-caption, p.border-caption{
 	padding: 15px;
 	background-color: #fff;
 	border: 2px solid black;
@@ -123,7 +133,36 @@ div.border-caption, p.border-caption{
 	z-index: 100;
 }
 
-div.border-caption { position: relative; }
+*/
+
+div.border-caption {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+	width: 80%;
+	overflow-wrap: break-word;
+	margin: 0 auto 0 auto;
+	padding:0;
+	z-index: 100;
+	position: relative; 
+}
+
+.border-caption p, .border-caption h2{
+	background-color: #fff;
+	padding: 0 15px;
+	margin:0;
+}
+
+.border-caption h2{padding-bottom: 10px;}
+
+.top-border, .bottom-border{
+	background: url('../img/border-caption-border.png') no-repeat;
+	display:block;
+	height:15px;
+}
+
+.top-border{background-position: top center;}
+.bottom-border{background-position: bottom center;}
+
 
 .border-caption.shift-up{margin-top:-20px; }
 .span12 .border-caption.shift-up{margin-top:-40px; }
@@ -140,11 +179,18 @@ div.border-caption { position: relative; }
 /* HAND-PLACED TEXT ELEMENTS */
 
 #intro p{position:absolute;top:150px;left:550px;max-width: 320px;color:white;}
-#life-woman{background-color: #81b8f1;margin-top:25px;}
+#life-woman{background-color: #81b8f1;padding-top:80px;}
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
-#come-on{font-size:200px;margin: 5px 0 0 0;}
+#come-on{font-size:200px;margin: 5px 0 25px 0;}
 #quotes{padding-top:25px;margin-top:25px;}
+#penultimate-quotes .border-caption {
+	margin-bottom:35px;
+}
 
+#penultimate-quotes h3{
+	padding: 0 20px;
+	background-color:#fff; 
+}
 
 /* SPECIAL FOR INDIAN OAKS */
 #indianoaks.graphic-novel .divider {background: url('../img/day3/rule-horiz.png') #57A34C center -5px no-repeat;}
@@ -154,10 +200,7 @@ div.border-caption { position: relative; }
 
 /* SOCIAL */
 
-@font-face {font-family: 'trb_Icons'; font-style: normal;font-weight: normal;
-  src: url('//graphics.chicagotribune.com/fonts/trbicons.eot');
-  src: url('//graphics.chicagotribune.com/fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('//graphics.chicagotribune.com/fonts/trbicons.woff') format('woff'), url('//graphics.chicagotribune.com/fonts/trbicons.ttf') format('truetype');
-}
+
 
 [class^="nguxicon-"],
 [class*=" nguxicon-"] {
@@ -180,10 +223,8 @@ div.border-caption { position: relative; }
 	float:none;
 	display:block;
 	max-width: 320px;
-	margin:0 auto 25px auto;
-	padding: 15px;
-/*	border-bottom: 1px solid white;
-*/	text-align: center;
+	margin:0 auto;
+	text-align: center;
 }
 
 .footnotes #social-menu{border-bottom:none;}
@@ -212,6 +253,7 @@ div.border-caption { position: relative; }
 	#quotes{padding:0;}
 	#quotes h3{text-align: center;padding:25px 15px;}
 	#DCFS-take{margin-top:-25px;}
+	#life-woman{padding-top:0;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
 	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
 	.span12 .border-caption.shift-up{margin-top:-8px; }

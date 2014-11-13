@@ -24,7 +24,7 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 
 {% block content %}
 
-{% macro graphictext(id) %}
+{% macro graphitext(id) %}
 {% if indianoaks[id].header %}
 <h2>{{ indianoaks[id].header|process_text() }}</h2>
 {% endif %}
@@ -32,6 +32,38 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 {% if indianoaks[id].footnote %}
 <a id ='{{ id }}-footnote'class='footnote' href='#' 'footnote{{ indianoaks[id].foot_numeral|int }}'>{{ indianoaks[id].foot_numeral|int }}</a></p>
 {% endif %}
+{% endmacro%}
+
+{% macro graphictext(id, border_caption, classes) %}
+
+{% if border_caption == "true" %}
+{############################################################}
+{#
+{#	HOW TO USE THIS MACRO:
+{#	{{ graphictext('reference ID', 'true/false' (apply border caption?) , '(ANY CLASSES YOU WANT)') }}
+{#
+{############################################################}
+<div class='border-caption {{ classes }}' style=''>
+	<span class='top-border'></span>
+	{% if indianoaks[id].header %}
+	<h2>{{ indianoaks[id].header|process_text() }}</h2>
+	{% endif %}
+	<p class='' style=''>
+		{{ indianoaks[id].blurb|process_text() }}
+		{% if indianoaks[id].footnote %}
+		<a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ indianoaks[id].foot_numeral|int }}' 'footnote{{ indianoaks[id].foot_numeral|int }}'>{{ indianoaks[id].foot_numeral|int }}</a>
+		{% endif %}
+	</p>
+	<span class='bottom-border'></span>
+</div>
+{% else %}
+{{ indianoaks[id].blurb|process_text() }}
+{% if indianoaks[id].footnote %}
+<a id ='{{ id }}-footnote' class='footnote' href='#footnote{{ indianoaks[id].foot_numeral|int }}' 'footnote{{ indianoaks[id].foot_numeral|int }}'>{{ indianoaks[id].foot_numeral|int }}</a>
+{% endif %}
+{% endif %}
+
+
 {% endmacro%}
 	<div class="container-fluid">
 		<article id='indianoaks' class='graphic-novel'>
@@ -57,82 +89,55 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 
 			<section class='gn-river'>
 				<div class='panel-wrapper'>
-					<div class='border-caption shift-down shift-left'>
-						{{ graphictext('frame1a') }}
-					</div>
+					{{ graphictext('frame1a', 'true', 'shift-down shift-left') }}
 					<img class='border' src='img/indianoaks/frame1-d3.jpg' />
-					<div class='border-caption shift-up shift-right'>
-						{{ graphictext('frame1b') }}
-					</div>
+					{{ graphictext('frame1b', 'true', 'shift-up shift-right') }}
 				</div>
 
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame2-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame2') }}
-					</div>
+					{{ graphictext('frame2', 'true', 'shift-up') }}
 				</div>		
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame3-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame3') }}
+					{{ graphictext('frame3', 'true', 'shift-up') }}
 
-					</div>
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame4-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame4') }}
-					</div>
+					{{ graphictext('frame4', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame5-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame5b') }}
-					</div>
+					{{ graphictext('frame5b', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame5B-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame5') }}
-					</div>
+					{{ graphictext('frame5', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame6-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame6') }}
-					</div>
+					{{ graphictext('frame6', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame7-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame7') }}
-					</div>
+					{{ graphictext('frame7', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame8-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame8') }}
-					</div>
+					{{ graphictext('frame8', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame9-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame9') }}
-					</div>
-
+					{{ graphictext('frame9', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame10-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame10') }}
-					</div>
+					{{ graphictext('frame10', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame11-d3.jpg' />
-					<div class='border-caption shift-up'>
-						{{ graphictext('frame11') }}
-					</div>
+					{{ graphictext('frame11', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame12-d3.jpg' />
