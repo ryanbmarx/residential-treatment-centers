@@ -257,13 +257,13 @@ div.border-caption {
 	#DCFS-take{margin-top:-25px;}
 	#life-woman{padding-top:0;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
-	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
 	#come-on {font-size: 160px;}
 	.span12 .border-caption.shift-up{margin-top:-8px; }
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 767px) {
+	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
  
 }
 
