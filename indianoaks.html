@@ -55,6 +55,8 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 		{% endif %}
 	</p>
 	<span class='bottom-border'></span>
+	<div class='vert-border left'></div>
+	<div class='vert-border'></div>
 </div>
 {% else %}
 {{ indianoaks[id].blurb|process_text() }}
@@ -124,8 +126,16 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 					{{ graphictext('frame7', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
+					<div class='row-fluid'>
+						<div class='span8'>
 					<img class='border' src='img/indianoaks/frame8-d3.jpg' />
-					{{ graphictext('frame8', 'true', 'shift-up') }}
+						</div>
+						<div class='span4'>
+						{{ graphictext('frame8', 'true', 'shift-left shift-down') }}
+						</div>
+					</div>
+					
+					
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame9-d3.jpg' />

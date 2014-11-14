@@ -122,10 +122,11 @@ a.footnote{
 .border{border:2px solid black;}
 
 div.border-caption {
-	border-left: 2px solid black;
-	border-right: 2px solid black;
+	/*border-left: 2px solid black;
+	border-right: 2px solid black;*/
 	width: 80%;
 	overflow-wrap: break-word;
+	overflow:hidden;
 	margin: 0 auto 0 auto;
 	padding:0;
 	z-index: 100;
@@ -153,10 +154,25 @@ div.border-caption {
 .border-caption.shift-up{margin-top:-20px; }
 .span12 .border-caption.shift-up{margin-top:-40px; }
 .border-caption.shift-down{margin-bottom:-20px;}
-.border-caption.shift-left{margin-left:15px;}
+.border-caption.shift-left{margin-left:-20px;}
+.border-caption.shift-left.shift-up, .border-caption.shift-left.shift-down{margin-left:15px;}
 .border-caption.shift-right{margin-right:15px;}
 
+.vert-border{
+	width:3px;
+	height:100%;
+	position:absolute;
+	top:2px;
+	right:0;
+	background:url('../img/border-caption-border-vert.png') center right no-repeat;
+	z-index:500;
+}
 
+.vert-border.left{
+	left:-1px;
+	background:url('../img/border-caption-border-vert.png') center left no-repeat;
+
+}
 
 .gn-river{max-width:768px;margin:0 auto;}
 .panel-wrapper{position: relative; margin:25px 0;}
