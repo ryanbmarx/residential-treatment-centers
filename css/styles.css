@@ -1,22 +1,5 @@
-/*@font-face {
-    font-family: 'trashhandregular';
-    src: url('TrashHand-webfont.eot');
-    src: url('TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
-         url('TrashHand-webfont.woff') format('woff'),
-         url('TrashHand-webfont.ttf') format('truetype'),
-         url('TrashHand-webfont.svg#trashhandregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-*/
-
-/*@font-face {font-family: 'CCMoritat-Heavy';src: url('webfonts/2C9497_0_0.eot');src: url('webfonts/2C9497_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_0_0.woff2') format('woff2'),url('webfonts/2C9497_0_0.woff') format('woff'),url('webfonts/2C9497_0_0.ttf') format('truetype');}*/
 @font-face {font-family: 'CCMoritat-BoldItalic';src: url('webfonts/2C9497_1_0.eot');src: url('webfonts/2C9497_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_1_0.woff2') format('woff2'),url('webfonts/2C9497_1_0.woff') format('woff'),url('webfonts/2C9497_1_0.ttf') format('truetype');}
-/*@font-face {font-family: 'CCMoritat-Bold';src: url('webfonts/2C9497_2_0.eot');src: url('webfonts/2C9497_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_2_0.woff2') format('woff2'),url('webfonts/2C9497_2_0.woff') format('woff'),url('webfonts/2C9497_2_0.ttf') format('truetype');}
-@font-face {font-family: 'CCMoritat-Italic';src: url('webfonts/2C9497_3_0.eot');src: url('webfonts/2C9497_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_3_0.woff2') format('woff2'),url('webfonts/2C9497_3_0.woff') format('woff'),url('webfonts/2C9497_3_0.ttf') format('truetype');}*/
 @font-face {font-family: 'CCMoritat';src: url('webfonts/2C9497_4_0.eot');src: url('webfonts/2C9497_4_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_4_0.woff2') format('woff2'),url('webfonts/2C9497_4_0.woff') format('woff'),url('webfonts/2C9497_4_0.ttf') format('truetype');}
-/*@font-face {font-family: 'CCMoritat-HeavyItalic';src: url('webfonts/2C9497_5_0.eot');src: url('webfonts/2C9497_5_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2C9497_5_0.woff2') format('woff2'),url('webfonts/2C9497_5_0.woff') format('woff'),url('webfonts/2C9497_5_0.ttf') format('truetype');}*/
 @font-face {font-family: 'trb_Icons'; font-style: normal;font-weight: normal;src: url('//graphics.chicagotribune.com/fonts/trbicons.eot');src: url('//graphics.chicagotribune.com/fonts/trbicons.eot?#iefix') format('embedded-opentype'), url('//graphics.chicagotribune.com/fonts/trbicons.woff') format('woff'), url('//graphics.chicagotribune.com/fonts/trbicons.ttf') format('truetype');}
 
 
@@ -77,7 +60,7 @@ ul p, ol p{font-size: 16px}
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
-font-family: 'CCMoritat', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
+font-family:'Arial', sans-serif;font-family: 'CCMoritat', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
 .graphic-novel h1{font-size: 120px;font-family:'CCMoritat-BoldItalic';margin-bottom:15px;}
 .graphic-novel h2{font-size: 42px;margin-bottom: .5em;}
 .graphic-novel h3{font-size: 30px;}
