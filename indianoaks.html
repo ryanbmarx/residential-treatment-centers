@@ -9,9 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <style type="text/css">
-body{background-color:#70C065;}
-div.border-caption, p.border-caption{background-color: #AADDA4}
-
+	body{background-color:#EBB145;}
 </style>
 
 {% endblock %}
@@ -73,13 +71,12 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
 					{% include '_social-row.html' %}
+					<h1 class='text-center'>Unsafe<span class='white'><br class='visible-phone' />Haven</span></h1>
 			<div class='row-fluid'>
 				<div class='span8'>
-					<img src='img/indianoaks/frame0b-d3.jpg' />
+					<img src='img/indianoaks/frame00-d3.jpg' />
 				</div>
 				<div class='span4'>
-
-					<h1 class='text-center'>headline here<span class='white'><br class='visible-phone' />here</span></h1>
 					<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
 
 				</div>
@@ -91,66 +88,62 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 
 			<section class='gn-river'>
 				<div class='panel-wrapper'>
-					{{ graphictext('frame1a', 'true', 'shift-down shift-left') }}
-					<img class='border' src='img/indianoaks/frame1-d3.jpg' />
-					{{ graphictext('frame1b', 'true', 'shift-up shift-right') }}
+					{{ graphictext('frame1a', 'true', 'wide') }}
+					<img class='border' src='img/indianoaks/frame01-d3.jpg' />
+					<img class='' src='img/indianoaks/frame12-d3.jpg' />
+					{{ graphictext('frame1b', 'true', 'shift-right') }}
 				</div>
 
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame2-d3.jpg' />
+					<img class='border' src='img/indianoaks/frame02-d3.jpg' />
 					{{ graphictext('frame2', 'true', 'shift-up') }}
 				</div>		
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame3-d3.jpg' />
-					{{ graphictext('frame3', 'true', 'shift-up') }}
+					<img class='border' src='img/indianoaks/frame03-d3.jpg' />
+					{{ graphictext('frame3', 'true', 'shift-up-max') }}
 
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame4-d3.jpg' />
-					{{ graphictext('frame4', 'true', 'shift-up') }}
+					<img class='' src='img/indianoaks/frame04-d3.jpg' />
+					{{ graphictext('frame4', 'true', 'shift-up-max') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame5-d3.jpg' />
+					<img class='border' src='img/indianoaks/frame05A-d3.jpg' />
 					{{ graphictext('frame5b', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame5B-d3.jpg' />
-					{{ graphictext('frame5', 'true', 'shift-up') }}
+					<img class='border' src='img/indianoaks/frame05B-d3.jpg' />
+					{{ graphictext('frame5', 'true', 'shift-up shift-left') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame6-d3.jpg' />
-					{{ graphictext('frame6', 'true', 'shift-up') }}
+					<img class='border' src='img/indianoaks/frame06-d3.jpg' />
+					{{ graphictext('frame6', 'true', 'shift-up-max shift-right') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame7-d3.jpg' />
+					<img class='border' src='img/indianoaks/frame07-d3.jpg' />
 					{{ graphictext('frame7', 'true', 'shift-up') }}
+				</div>
+				<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame09-d3.jpg' />
+					{{ graphictext('frame9', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<div class='row-fluid'>
 						<div class='span8'>
-					<img class='border' src='img/indianoaks/frame8-d3.jpg' />
+					<img class='' src='img/indianoaks/frame08-d3.jpg' />
 						</div>
 						<div class='span4'>
-						{{ graphictext('frame8', 'true', 'shift-left shift-down') }}
+						{{ graphictext('frame8', 'true', 'shift-left shift-down wide') }}
 						</div>
 					</div>
-					
-					
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame9-d3.jpg' />
-					{{ graphictext('frame9', 'true', 'shift-up') }}
-				</div>
-				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame10-d3.jpg' />
+					<img class='' src='img/indianoaks/frame10-d3.jpg' />
 					{{ graphictext('frame10', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame11-d3.jpg' />
-					{{ graphictext('frame11', 'true', 'shift-up') }}
-				</div>
-				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame12-d3.jpg' />
+					<img class='' src='img/indianoaks/frame11-d3.jpg' />
+					{{ graphictext('frame11', 'true', 'shift-up-max wide') }}
 				</div>
 			</section>
 			<div class='divider visible-phone'></div>
@@ -172,6 +165,6 @@ div.border-caption, p.border-caption{background-color: #AADDA4}
 
 	</article>
 
-	{# include '_facebook_comments.html' #}
+	{% include '_facebook_comments.html' %}
 </div>
 {% endblock content %}
