@@ -71,25 +71,20 @@
 				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
 					{% include '_social-row.html' %}
-					<h1 class='text-center'>Unsafe<span class='white'><br class='visible-phone' />Haven</span></h1>
-			<div class='row-fluid'>
-				<div class='span8'>
-					<img src='img/indianoaks/frame00-d3.jpg' />
-				</div>
-				<div class='span4'>
-					<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
-
-				</div>
-			</div>
-
+			<section id='intro'>
+				<img src='img/indianoaks/frame00-d3.jpg' />
+				<h1 class='text-center'>Unsafe<span class='white'><br class='visible-phone' />Haven</span></h1>
+				<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
+			</section>
 			<div class='advert-wrapper visible-phone'>
 				<div class='advert' data-ad-type='cube'></div>
 			</div>
 
 			<section class='gn-river'>
 				<div class='panel-wrapper'>
-					{{ graphictext('frame1a', 'true', 'wide') }}
 					<img class='border' src='img/indianoaks/frame01-d3.jpg' />
+					{{ graphictext('frame1a', 'true', 'shift-up wide') }}
+					
 					<img class='' src='img/indianoaks/frame12-d3.jpg' />
 					{{ graphictext('frame1b', 'true', 'shift-right') }}
 				</div>

@@ -55,8 +55,7 @@ ul p, ol p{font-size: 16px}
 .affix{top:41px;z-index:1001;}
 
 /*INTRODUCTION STYLES*/
-#intro h1{font-size:60px;line-height: 1.2em}
-
+/*#intro h1{font-size:60px;line-height: 1.2em}*/
 /* GRAPHIC NOVEL STYLES */
 
 
@@ -107,8 +106,6 @@ a.footnote{
 .border{border:2px solid black;}
 
 div.border-caption {
-	/*border-left: 2px solid black;
-	border-right: 2px solid black;*/
 	width: 80%;
 	overflow-wrap: break-word;
 	overflow:hidden;
@@ -168,7 +165,7 @@ div.border-caption {
 
 /* HAND-PLACED TEXT ELEMENTS */
 
-#intro p{position:absolute;top:150px;left:550px;max-width: 320px;color:white;}
+#keyona #intro p{position:absolute;top:150px;left:550px;max-width: 320px;color:white;}
 #life-woman{background-color: #81b8f1;padding-top:80px;}
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
 #come-on{font-size:200px;margin: 5px 0 25px 0;}
@@ -184,6 +181,7 @@ div.border-caption {
 
 /* SPECIAL FOR INDIAN OAKS */
 
+#indianoaks #intro img {display:block;margin:10px auto 0 auto;}
 #indianoaks.graphic-novel .divider {background: url('../img/indianoaks/rule-horiz.png') #EBB145 center -5px no-repeat;}
 #indianoaks.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #EBB145 center -19px no-repeat;}
 #indianoaks .border-caption {box-shadow: 3px 3px 2px rgba(0,0,0,.3);margin-bottom: 15px;}
