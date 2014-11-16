@@ -83,7 +83,7 @@ a.footnote{
 .graphic-novel a.footnote:hover{background-color: #333;text-decoration: none;}
 .graphic-novel .white a.footnote{color:#62A5EF;background-color: #fff;}
 .graphic-novel .white a.footnote:hover{background-color: #E1E8FB;}
-
+.graphic-novel .black {color:#000;}
 
 
 .graphic-novel .divider {
@@ -100,8 +100,10 @@ a.footnote{
 .bg-white{background-color:#fff;}
 
 .graphic-novel img{width:100%;max-width: 800px;}
-.graphic-novel img.slim{max-width:400px;display:block;margin:15px auto;}
-.graphic-novel img.make-center{display: block;margin:0 auto;}
+.graphic-novel .slim{max-width:400px;display:block;margin:15px auto;}
+.graphic-novel .make-center{display: block;margin:0 auto;}
+.graphic-novel .med-slim{max-width:600px;display:block;margin:15px auto;}
+
 
 .border{border:2px solid black;}
 
@@ -117,8 +119,12 @@ div.border-caption {
 
 .border-caption p, .border-caption h2{
 	background-color: #fff;
-	padding: 0 15px;
+	padding: 0 15px 15px 15px;
 	margin:0;
+}
+
+.graphic-novel .border-caption p:last-child{
+	padding-bottom:0;
 }
 
 .border-caption h2{padding-bottom: 10px;}
@@ -186,11 +192,17 @@ div.border-caption {
 #indianoaks.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #EBB145 center -19px no-repeat;}
 #indianoaks .border-caption {box-shadow: 3px 3px 2px rgba(0,0,0,.3);margin-bottom: 15px;}
 
+/* SPECIAL FOR ROCK RIVER */
+
+#rockriver.graphic-novel .divider {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -5px no-repeat;}
+#rockriver.graphic-novel .divider.white {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -19px no-repeat;}
+
+#rockriver .clothespin{padding:15px 0 15px 15px;}
+#rockriver .after-that-i-felt-unsafe{}
+#rockriver #set-up-for-failure h2{position: absolute;max-width: 320px;padding: 0 25px;top:30%;left: 0;font-size: 70px;}
+#rockriver #set-up-for-failure p, #rockriver #set-up-for-failure h3{padding:25px;}
 
 /* SOCIAL */
-
-
-
 [class^="nguxicon-"],
 [class*=" nguxicon-"] {
   display: inline-block;

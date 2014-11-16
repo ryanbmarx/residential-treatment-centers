@@ -8,27 +8,25 @@
 {% block css %}
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
+
 <style type="text/css">
-  #graphic-promos div{
+  #graphic-promos a{
+    opacity:.7;
+    display:block;
     width:30%;
     padding-right:3%;
     float:left;
     text-align: center;
   }
 
-#keyona{
-    background-color:#63A5F1;
+  #graphic-promos a:hover{
+    opacity:1;
+    text-decoration: none;
   }
 
-  #indianoaks{
-    background-color:#EBB145;
-  }
-
-   #rockriver{
-    
-
-    background-color:#56A14C;
-  }
+  #keyona{background-color:#63A5F1;}
+  #indianoaks{background-color:#EBB145;}
+  #rockriver{background-color:#abdea6;}
 
 }
 
@@ -57,25 +55,21 @@
 {% include '_social-row.html' %}
 
 
-<article id='graphic-promos'>
-<div id='keyona'>
-<a href='keyona.html'>
-	<h1>KEYONA</h1>
+<article id='graphic-promos' class='graphic-novel'>
+
+<a id='keyona' href='keyona.html'>
+	<h2>KEYONA</h2>
 	<img src='img/keyona/day2-frame1.jpg' />
 </a>
-</div>
-<div id='indianoaks'>
-<a href='indianoaks.html'>
-	<h1>INDIAN OAKS</h1>
+<a id='indianoaks'  href='indianoaks.html'>
+	<h2>INDIAN OAKS</h2>
 	<img src='img/indianoaks/frame00-d3.jpg' />
 </a>
-	</div>
-  <div id='rockriver'>
-<a href='indianoaks.html'>
-  <h1>Rock River</h1>
-  <img src='img/indianoaks/frame0b-d3.jpg' />
+<a id='rockriver'  href='rockriver.html'>
+  <h2>Fight & Flight</h2>
+  <p>Dek dek dek dek dek dek dek </p>
+  <img src='img/rockriver/frame10-d4.jpg' />
 </a>
-  </div>
 </article> 
 <div class='clearfix'></div>
 
