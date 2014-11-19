@@ -146,9 +146,7 @@
 			<section class='footnotes text-center'>
 				{% include '_about-and-credits.html'%}
 				<h2 class='text-center'>Footnotes</h2>
-
 				<ul class='unstyled'>
-
 				{% for row in indianoaksfootnotes[1:] %}
 				<li id='footnote{{ row.numeral|int }}'>
 					<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
