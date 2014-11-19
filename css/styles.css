@@ -174,19 +174,14 @@ div.border-caption {
 
 /* HAND-PLACED TEXT ELEMENTS */
 
-#keyona #intro p{position:absolute;top:150px;left:550px;max-width: 320px;color:white;}
+#keyona #intro p{position:absolute;top:150px;left:550px;max-width: 320px;}
 #life-woman{background-color: #81b8f1;padding-top:80px;}
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
 #come-on{font-size:200px;margin: 5px 0 25px 0;}
 #quotes{padding-top:25px;margin-top:25px;}
-#penultimate-quotes .border-caption {
-	margin-bottom:35px;
-}
+#penultimate-quotes .border-caption {margin-bottom:35px;}
 
-#penultimate-quotes h3{
-	padding: 0 20px;
-	background-color:#fff; 
-}
+#penultimate-quotes h3{padding: 0 20px;background-color:#fff;}
 
 /* SPECIAL FOR INDIAN OAKS */
 
@@ -199,73 +194,35 @@ div.border-caption {
 
 #rockriver.graphic-novel .divider {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -5px no-repeat;}
 #rockriver.graphic-novel .divider.white {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -19px no-repeat;}
-
 #rockriver .clothespin{padding:15px 0 15px 15px;}
 #rockriver .after-that-i-felt-unsafe{}
+#set-up-for-failure{background-color:#ABDEA6;}
 #rockriver #set-up-for-failure h2{position: absolute;max-width: 320px;padding: 0 25px;top:30%;left: 0;font-size: 70px;}
 #rockriver #set-up-for-failure p, #rockriver #set-up-for-failure h3{padding:25px;}
 
 /* SOCIAL */
 [class^="nguxicon-"],
-[class*=" nguxicon-"] {
-  display: inline-block;
-  font-family: trb_Icons;
-  font-size: 120%;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1em;
-  text-transform: none;
-  vertical-align: text-bottom;
-}
+[class*=" nguxicon-"] {display: inline-block;font-family: trb_Icons;font-size: 120%;font-style: normal;font-weight: normal;line-height: 1em;text-transform: none; vertical-align: text-bottom;}
 .nguxicon-pintrest:before {content: "b";}
 .nguxicon-facebook:before {content: "f";}
 .nguxicon-gplus:before {content: "g";}
 .nguxicon-linkedin:before {content: "i";}
 .nguxicon-twitter:before {content: "t";}
-
-#social-menu{
-	float:none;
-	display:block;
-	max-width: 320px;
-	margin:0 auto;
-	text-align: center;
-}
-
+#social-menu{float:none;display:block;max-width: 320px;margin:0 auto;text-align: center;}
 .footnotes #social-menu{border-bottom:none;}
-
-#social-menu li a{
-	color: #fff;
-	opacity:.5;
-}
-
-#social-menu li a:hover{
-	color: #fff;
-	opacity:1;
-}
-
-#social-menu li {
-	display: inline-block;
-}
+#social-menu li a{color: #fff;opacity:.5;}
+#social-menu li a:hover{color: #fff;opacity:1;}
+#social-menu li {display: inline-block;}
 
 /* PROMOS */
-
-
 #graphic-promos {max-width: 100%;}
-
-#graphic-promos ul#social-menu{
-  background-color: #0D1123;
-width: 100%;
-margin-top: -6px;
-padding-bottom: 20px;
-max-width: 100%}
-
+#graphic-promos ul#social-menu{ background-color: #0D1123;width: 100%;margin-top: -6px;padding-bottom: 20px;max-width: 100%}
 .promo-panel{width:33.33%;overflow:hidden;float:left;display:block;overflow:hidden;text-align: center;}
 .promo-panel-inner{padding:20px; }
 #graphic-promos img{width: 100%;}
 #graphic-promos p,#graphic-promos h2{opacity:.3;}
 #graphic-promos a:hover {text-decoration: none;}
 #graphic-promos a:hover img,#graphic-promos a:hover p,#graphic-promos a:hover h2{opacity:1;}
-
 #graphic-promos #keyona{background-color:#63A5F1;}
 #graphic-promos #indianoaks{background-color:#EBB145;}
 #graphic-promos #indianoaks img{width: 75%;}
@@ -285,6 +242,7 @@ max-width: 100%}
 }
 
 @media (max-width: 768px) {
+	#keyona #intro p{ position:static;text-align: center;margin: 0 auto;max-width: 100%}
 	.advert-wrapper.right{float:none; margin: 25px 0;}
 	div.border-caption, p.border-caption{margin-bottom:15px;}
 	#quotes{padding:0;}
@@ -295,12 +253,16 @@ max-width: 100%}
 	#come-on {font-size: 160px;}
 	.span12 .border-caption.shift-up{margin-top:-8px; }
 	.promo-panel{width:100%;float:none;}
+/*	.graphic-novel h1{font-size:60px;}
+	.graphic-novel h2{font-size:28px;}*/
 
 }
 
-@media (max-width: 767px) {
-	#intro p {position: static;max-width: none;color:#000;margin-top:0;}
- 
+
+
+@media (max-width: 600px) {
+	.graphic-novel h1{font-size:60px;}
+	.graphic-novel h2{font-size:28px;line-height:1.3em;}
 }
 
 @media (max-width: 350px) {
