@@ -67,22 +67,21 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 			{% include '_social-row.html' %}
 			<h1 class='text-center'>Fight <span class='white'>and <br class='visible-phone' /></span>Flight</h1>
 			<h2 class='text-center'>{{ rockriver.subhede.blurb}}</h2>
-			<div class='advert-wrapper visible-phone'>
-				<div class='advert' data-ad-type='cube'></div>
-			</div>
 			<section class='gn-river'>
 				<div class='divider'></div>
 				<div class='panel-wrapper'>
 					{{ graphictext('frame1', 'true') }}
 					<img class='text-center' src='img/rockriver/frame01-d4.jpg' />	
 				</div>
-				<div class='panel-wrapper border' style='background-color:#ABDEA6'>
+				<div class='panel-wrapper'>
 					<div class='row-fluid'>
 						<div class='span3'>
-							{{ graphictext('frame2', 'false', 'clothespin') }}
+							{{ graphictext('frame2', 'true', 'hidden-phone shift-right wide') }}
 						</div>
 						<div class='span9'>
-							<img class='text-center' src='img/rockriver/frame02-d4.jpg' />
+							{{ graphictext('frame2', 'true', 'shift-down visible-phone') }}
+							<img class='border text-center' src='img/rockriver/frame02-d4.jpg' />
+
 						</div>
 					</div>
 				</div>
@@ -93,7 +92,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 							{{ graphictext('frame3', 'true', 'shift-up') }}
 						</div>
 						<div class='span6'>
-							<img class='text-center' src='img/rockriver/frame04-d4.jpg' />
+							<img class='text-center border' src='img/rockriver/frame04-d4.jpg' />
 							{{ graphictext('frame4', 'true', 'shift-up wide') }}
 						</div>				
 					</div>
