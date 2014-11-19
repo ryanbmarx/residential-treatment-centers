@@ -1,34 +1,41 @@
 {% extends "_base.html" %}
 
 {% block scripts %}
+<script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
 
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
 
 {% block css %}
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <style type="text/css">
-  #graphic-promos a{
-    opacity:.7;
-    display:block;
-    width:30%;
-    padding-right:3%;
-    float:left;
-    text-align: center;
-  }
 
-  #graphic-promos a:hover{
-    opacity:1;
-    text-decoration: none;
-  }
+/*#graphic-promos {max-width: 100%;}
 
-  #keyona{background-color:#63A5F1;}
-  #indianoaks{background-color:#EBB145;}
-  #rockriver{background-color:#abdea6;}
+#graphic-promos ul#social-menu{
+  background-color: #0D1123;
+width: 100%;
+margin-top: -6px;
+padding-bottom: 20px;
+max-width: 100%}
+
+.promo-panel{width:33.33%;overflow:hidden;float:left;}
+#graphic-promos a{display:block;padding:20px; text-align: center;height:100%;overflow:hidden;}
+#graphic-promos img{width: 100%;}
+#graphic-promos p,#graphic-promos h2{opacity:.3;}
+#graphic-promos a:hover {text-decoration: none;}
+#graphic-promos a:hover img,#graphic-promos a:hover p,#graphic-promos a:hover h2{opacity:1;}
+
+#keyona{background-color:#63A5F1;}
+#indianoaks{background-color:#EBB145;}
+#rockriver{background-color:#abdea6;}
 
 }
+
+.row-fluid .span4NoGutter { width:33.33333%; margin-left:0 } */
 
 </style>
 
@@ -52,25 +59,33 @@
 {% block content %}
 
 
-{% include '_social-row.html' %}
-
-
 <article id='graphic-promos' class='graphic-novel'>
+  {% include '_social-row.html' %}
+            <a href='keyona.html' id='keyona' class='promo-panel'>
+              <div class='promo-panel-inner'>
+               <img src='img/keyona/day2-frame1.jpg' />
+               <h2>Talking truth</h2>
+               <p>{{ keyona.subhede.blurb }}</p>
 
-<a id='keyona' href='keyona.html'>
-	<h2>KEYONA</h2>
-	<img src='img/keyona/day2-frame1.jpg' />
-</a>
-<a id='indianoaks'  href='indianoaks.html'>
-	<h2>INDIAN OAKS</h2>
-	<img src='img/indianoaks/frame00-d3.jpg' />
-</a>
-<a id='rockriver'  href='rockriver.html'>
-  <h2>Fight & Flight</h2>
-  <p>Dek dek dek dek dek dek dek </p>
-  <img src='img/rockriver/frame10-d4.jpg' />
-</a>
+             </div>
+           </a>
+           <a href='indianoaks.html' id='indianoaks' class='promo-panel'>
+            <div class='promo-panel-inner'>
+             <img src='img/indianoaks/frame00-d3.jpg' />
+             <h2>Unsafe Haven</h2>
+             <p>{{ indianoaks.subhede.blurb }}</p>
+
+           </div>
+         </a>
+         <a href='rockriver.html' id='rockriver' class='promo-panel'>
+          <div class='promo-panel-inner'>
+            <img src='img/rockriver/frame10-d4.jpg' />
+            <h2>Fight & Flight</h2>
+            <p>{{ rockriver.subhede.blurb }}</p>
+          </div>
+        </a>
+        <div class='clearfix'></div>
+      </div> 
 </article> 
-<div class='clearfix'></div>
 
 {% endblock content %}
