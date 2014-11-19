@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 
 {% block scripts %}
+<script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
 
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
@@ -65,7 +66,7 @@ body{
 				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
 			{% include '_social-row.html' %}
-			<h1 class='text-center'>Keyona<span class='white'><br class='visible-phone' />Laws</span></h1>
+			<h1 class='text-center'>Talking <span class='white'><br class='visible-phone' /> Truth</span></h1>
 			<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
 			<div class='advert-wrapper visible-phone'>
 				<div class='advert' data-ad-type='cube'></div>
@@ -245,7 +246,7 @@ body{
 			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
 
 			<section class='footnotes text-center'>
-				{% include '_about-and-credits.html'%}
+				{% include '_about-and-credits.html' %}
 				<h2 class='text-center'>Footnotes</h2>
 				<ul class='unstyled'>
 					{% for row in keyonafootnotes[1:] %}

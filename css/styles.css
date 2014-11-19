@@ -33,6 +33,8 @@ ul p, ol p{font-size: 16px}
 .constrained{max-width:768px;margin:0 auto;}
 .credits{margin-top:25px;}
 
+
+
 /* Let's make footable nicer, shall we?*/
 .footable  {font-family:'Arial', sans-serif;}
 .footable>thead>tr>th{border-radius: 0;background-color: #144A7C;background-image: none;color: #fff;text-shadow: none;}
@@ -85,6 +87,7 @@ a.footnote{
 .graphic-novel .white a.footnote:hover{background-color: #E1E8FB;}
 .graphic-novel .black {color:#000;}
 
+.graphic-novel a:hover{text-decoration: underline}
 
 .graphic-novel .divider {
 	background: url('../img/rule-horiz.png') #62A5EF center -5px no-repeat;
@@ -164,7 +167,7 @@ div.border-caption {
 
 }
 
-.gn-river{max-width:768px;margin:0 auto;}
+.gn-river{max-width:700px;margin:0 auto;}
 .panel-wrapper{position: relative; margin:25px 0;}
 #indianoaks .panel-wrapper{margin:60px 0;}
 
@@ -244,7 +247,40 @@ div.border-caption {
 	display: inline-block;
 }
 
-@media (max-width: 1000px){
+/* PROMOS */
+
+
+#graphic-promos {max-width: 100%;}
+
+#graphic-promos ul#social-menu{
+  background-color: #0D1123;
+width: 100%;
+margin-top: -6px;
+padding-bottom: 20px;
+max-width: 100%}
+
+.promo-panel{width:33.33%;overflow:hidden;float:left;display:block;overflow:hidden;text-align: center;}
+.promo-panel-inner{padding:20px; }
+#graphic-promos img{width: 100%;}
+#graphic-promos p,#graphic-promos h2{opacity:.3;}
+#graphic-promos a:hover {text-decoration: none;}
+#graphic-promos a:hover img,#graphic-promos a:hover p,#graphic-promos a:hover h2{opacity:1;}
+
+#graphic-promos #keyona{background-color:#63A5F1;}
+#graphic-promos #indianoaks{background-color:#EBB145;}
+#graphic-promos #indianoaks img{width: 75%;}
+#graphic-promos #rockriver{background-color:#abdea6;}
+
+}
+
+
+
+
+.row-fluid .span4NoGutter { width:33.33333%; margin-left:0 }
+
+
+@media (max-width: 1028px){
+	#graphic-promos .promo-panel p, #graphic-promos .promo-panel h2, #graphic-promos .promo-panel img{opacity:1;}
 	.affix{top:0;}	
 }
 
@@ -258,6 +294,7 @@ div.border-caption {
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
 	#come-on {font-size: 160px;}
 	.span12 .border-caption.shift-up{margin-top:-8px; }
+	.promo-panel{width:100%;float:none;}
 
 }
 

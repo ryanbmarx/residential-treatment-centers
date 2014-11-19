@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 
 {% block scripts %}
+<script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
 
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
@@ -9,7 +10,7 @@
 
 <link rel="stylesheet" type="text/css" href="css/styles.css?gjhkdlfghdfkjh">
 <style type="text/css">
-body{/*background-color:#abdea6*/;background-color:#84AC80;}
+body{/*background-color:#abdea6*/;background-color:#73C56A;}
 </style>
 {% endblock %}
 
@@ -75,7 +76,7 @@ body{/*background-color:#abdea6*/;background-color:#84AC80;}
 					{{ graphictext('frame1', 'true') }}
 					<img class='text-center' src='img/rockriver/frame01-d4.jpg' />	
 				</div>
-				<div class='panel-wrapper border'>
+				<div class='panel-wrapper border' style='background-color:#ABDEA6'>
 					<div class='row-fluid'>
 						<div class='span3'>
 							{{ graphictext('frame2', 'false', 'clothespin') }}
@@ -186,11 +187,11 @@ body{/*background-color:#abdea6*/;background-color:#84AC80;}
 				{% include '_about-and-credits.html'%}
 				<h2 class='text-center'>Footnotes</h2>
 				<ul class='unstyled'>
-					{# for row in rockriverfootnotes[1:] %}
+					{% for row in rockriverfootnotes[1:] %}
 					<li id='footnote{{ row.numeral|int }}'>
 						<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
 					</li>	
-					{% endfor #}
+					{% endfor %}
 				</ul>	
 			</section>
 

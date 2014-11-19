@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block scripts %}
-
+<script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
 
@@ -102,13 +102,14 @@
 					<img class='' src='img/indianoaks/frame04-d3.jpg' />
 					{{ graphictext('frame4', 'true', 'shift-up-max') }}
 				</div>
+
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame05A-d3.jpg' />
-					{{ graphictext('frame5b', 'true', 'shift-up') }}
-				</div>
-				<div class='panel-wrapper'>
-					<img class='border' src='img/indianoaks/frame05B-d3.jpg' />
 					{{ graphictext('frame5', 'true', 'shift-up shift-left') }}
+				</div>
+								<div class='panel-wrapper'>
+					<img class='border' src='img/indianoaks/frame05B-d3.jpg' />
+					{{ graphictext('frame5b', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
 					<img class='border' src='img/indianoaks/frame06-d3.jpg' />
@@ -141,8 +142,6 @@
 					{{ graphictext('frame11', 'true', 'shift-up-max wide') }}
 				</div>
 			</section>
-			<div class='divider visible-phone'></div>
-
 
 			<section class='footnotes text-center'>
 				{% include '_about-and-credits.html'%}
