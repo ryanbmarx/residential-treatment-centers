@@ -1,8 +1,15 @@
 {% extends "_base.html" %}
 
+{% block paywall %}
+    {% if PREVIEW_SERVER %}
+        {% include "_paywall_stage.html" %}
+    {% else %}
+        {% include "_paywall_prod.html" %}
+    {% endif %}
+{% endblock paywall %}
+
 {% block scripts %}
 <script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
-
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
 
@@ -129,19 +136,17 @@ body{
 			</section>
 			<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
 			<section class='gn-river'>
-				<div class='row-fluid'>
-					<div class='span3 hidden-phone'>{# EMPTY SPACER #}</div>
-					<div class='span6'>
-						<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
-					</div>
+
+				<div class='panel-wrapper med-slim'>
+					{{ graphictext('frame6c', 'true', 'shift-down shift-right') }}
+					<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
+					{{ graphictext('frame6b', 'true', 'shift-right shift-up') }}
 				</div>
 				<h2 id='come-on' class='white text-center'>{{ keyona.comeon.blurb }}</h2>
-				<h2 class='text-center white'>{{ graphictext('frame6b') }}</h2>
-				<div class='row-fluid'>
-					<div class='span12'>
-						<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
-						<p>{{ graphictext('frame7') }}</p>
-					</div>
+				
+				<div class='panel-wrapper'>
+					<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
+					<p>{{ graphictext('frame7') }}</p>
 				</div>
 				<div class='row-fluid'>
 					<div class='span1 hidden-phone'>{# EMPTY SPACER #}</div>
