@@ -5,22 +5,44 @@
 {% include '_social-row.html' %}
 <div class='divider'></div>
 <section class='credits'>
-<h2>Credits</h2>
-<p>Art direction and illustration:<br class='visible-phone'>
-	<span class='white'><a href='mailto:{{ credits.rick.email }}'>{{ credits.rick.name}}</a></span></a>
-</p>
-<p>Design:<br class='visible-phone'>
-	<span class='white'><a href='mailto:{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a></span></a>
-</p>
-<p>Writing and reporting:<br class='visible-phone'>
-	<span class='white'><a href='mailto:{{ credits.david.email }}'>{{ credits.david.name}}</a></span>, <br class='visible-phone'>
-	<span class='white'><a href='mailto:{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a></span> and <br class='visible-phone'>
- 	<span class='white'><a href='mailto:{{ credits.gary.email }}'>{{ credits.gary.name}}</a></span>
-</p>
-<p class='white'>
-	<a href='http://twitter.com/chitribgraphics' target='_blank'>@ChiTribGraphics</a>
-</p>
-</section>
-{% include '_promos.html'%}
-<div class='divider'></div>
+	<h2>Credits</h2>
+	<h3>Art direction and illustration:</h3>
+	<p>
+		<span class='white'>
+			<a href='{{ credits.rick.email }}'>{{ credits.rick.name}}</a>
+			<a href='http://twitter.com/{{ credits.rick.twitter }}'>(@{{ credits.rick.twitter }})</a>
+		</span>
+	</p>
+	<h3>Design:</h3>
+	<p>
+		<span class='white'>
+			<a href='{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a>
+			<a href='http://twitter.com/{{ credits.ryan.twitter }}'>(@{{ credits.ryan.twitter }})</a>
+		</span>
+	</p>
+	<p class='white'>
+		<a href='http://twitter.com/chitribgraphics' target='_blank'>@ChiTribGraphics</a>
+	</p>
+	<h3>Writing:</h3>
+	<p>
+		<span class='white'>
+			<a href='{{ credits.david.email }}'>{{ credits.david.name}}</a>
+			<a href='http://twitter.com/{{ credits.david.twitter }}'>(@{{ credits.david.twitter }})</a>
+		</span>
+	</p>
+	<p>
+		<span class='white'>
+			<a href='{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a>
+			<a href='http://twitter.com/{{ credits.duaa.twitter }}'>(@{{ credits.duaa.twitter }})</a>
+		</span> 
+		<p>
+			<span class='white'>
+				<a href='{{ credits.gary.email }}'>{{ credits.gary.name}}</a>
+				<a href='http://twitter.com/{{ credits.gary.twitter }}'>(@{{ credits.gary.twitter }})</a>
+			</span>
+		</p>
+
+	</section>
+	{% include '_promos.html'%}
+	<div class='divider'></div>
 
