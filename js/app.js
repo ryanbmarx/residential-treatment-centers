@@ -13,24 +13,6 @@ var add_facebook_comments = function() {
   $("#fb-comments").append(fbml);
 };
 
-
-  //  (function($) {
-  //    $.fn.equalHeights = function(minHeight, maxHeight) {
-  //     tallest = (minHeight) ? minHeight : 0;
-  //     this.each(function() {
-  //      if($(this).height() > tallest) {
-  //       tallest = $(this).height();
-  //     }
-  //   });
-  //     if((maxHeight) && tallest > maxHeight) tallest = maxHeight;
-  //     return this.each(function() {
-  //      $(this).height(tallest).css("overflow","auto");
-  //    });
-  //   }
-  // })(jQuery);
-
-
-
 $(document).ready(function(){
 	$('.promo-panel').matchHeight();
   // Load FB comments
