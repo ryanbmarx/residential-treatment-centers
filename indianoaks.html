@@ -81,7 +81,7 @@
 					{% include '_social-row.html' %}
 			<section id='intro'>
 				<img src='img/indianoaks/frame00-d3.jpg' />
-				<h1 class='text-center'>Unsafe<span class='white'><br class='visible-phone' />Haven</span></h1>
+				<h1 class='text-center'>Unsafe<span class='graphicwhite'><br class='visible-phone' />Haven</span></h1>
 				<h2 class='text-center'>{{ indianoaks.subhede.blurb}}</h2>
 			</section>
 			<div class='advert-wrapper visible-phone'>
@@ -157,7 +157,7 @@
 				<ul class='unstyled'>
 				{% for row in indianoaksfootnotes[1:] %}
 				<li id='footnote{{ row.numeral|int }}'>
-					<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
+					<p class='text-center'><strong class='graphicwhite'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
 				</li>	
 				{% endfor %}
 			</ul>	

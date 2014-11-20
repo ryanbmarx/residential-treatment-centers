@@ -74,7 +74,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
 			{% include '_social-row.html' %}
-			<h1 class='text-center'>Fight <span class='white'>and <br class='visible-phone' /></span>Flight</h1>
+			<h1 class='text-center'>Fight <span class='graphicwhite'>and <br class='visible-phone' /></span>Flight</h1>
 			<h2 class='text-center'>{{ rockriver.subhede.blurb}}</h2>
 			<section class='gn-river'>
 				<div class='divider'></div>
@@ -116,7 +116,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 				</div>
 				<div class='divider'></div>
 			</section>
-			<h2 class='text-center white'>{{ rockriver.sub2.blurb }}</h2>
+			<h2 class='text-center graphicwhite'>{{ rockriver.sub2.blurb }}</h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>		
 					<img class='border text-center' src='img/rockriver/frame07-d4.jpg' />
@@ -136,7 +136,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 				</div>
 				<div class='divider'></div>
 			</section>
-			<h2 class='text-center white'>{{ rockriver.sub3.blurb }}</h2>
+			<h2 class='text-center graphicwhite'>{{ rockriver.sub3.blurb }}</h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>	
 					<img class='border text-center' src='img/rockriver/frame10-d4.jpg' />
@@ -183,7 +183,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 				<div id='set-up-for-failure' class='panel-wrapper border'>
 					<h3>{{ rockriver.frame19a.blurb }}</h3>
 					<img class='text-center' src='img/rockriver/frame19-d4.jpg' />
-					<h2 class='white'>{{ rockriver.frame19b.blurb }}</h2>
+					<h2 class='graphicwhite'>{{ rockriver.frame19b.blurb }}</h2>
 
 				</div>
 
@@ -197,7 +197,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 				<ul class='unstyled'>
 					{% for row in rockriverfootnotes[1:] %}
 					<li id='footnote{{ row.numeral|int }}'>
-						<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
+						<p class='text-center'><strong class='graphicwhite'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
 					</li>	
 					{% endfor %}
 				</ul>	

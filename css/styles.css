@@ -82,8 +82,8 @@ a.footnote{
 	font-weight: bolder;
 }
 .graphic-novel a.footnote:hover{background-color: #333;text-decoration: none;}
-.graphic-novel .white a.footnote{color:#62A5EF;background-color: #fff;}
-.graphic-novel .white a.footnote:hover{background-color: #E1E8FB;}
+.graphic-novel .graphicwhite a.footnote{color:#62A5EF;background-color: #fff;}
+.graphic-novel .graphicwhite a.footnote:hover{background-color: #E1E8FB;}
 .graphic-novel .black {color:#000;}
 
 .graphic-novel a:hover{text-decoration: underline}
@@ -94,11 +94,11 @@ a.footnote{
 	margin: 35px 0;
 }
 
-.graphic-novel .divider.white {
+.graphic-novel .divider.graphicwhite {
 	background: url('../img/rule-horiz.png') #62A5EF center -19px no-repeat;
 }
 
-.graphic-novel .white a, .graphic-novel .white{color:#fff;}
+.graphic-novel .graphicwhite a, .graphic-novel .graphicwhite{color:#fff;}
 .bg-white{background-color:#fff;}
 
 .graphic-novel img{width:100%;max-width: 800px;}
@@ -186,13 +186,13 @@ div.border-caption {
 
 #indianoaks #intro img {display:block;margin:10px auto 0 auto;}
 #indianoaks.graphic-novel .divider {background: url('../img/indianoaks/rule-horiz.png') #EBB145 center -5px no-repeat;}
-#indianoaks.graphic-novel .divider.white {background: url('../img/day3/rule-horiz.png') #EBB145 center -19px no-repeat;}
+#indianoaks.graphic-novel .divider.graphicwhite {background: url('../img/day3/rule-horiz.png') #EBB145 center -19px no-repeat;}
 #indianoaks .border-caption {box-shadow: 3px 3px 2px rgba(0,0,0,.3);margin-bottom: 15px;}
 
 /* SPECIAL FOR ROCK RIVER */
 
 #rockriver.graphic-novel .divider {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -5px no-repeat;}
-#rockriver.graphic-novel .divider.white {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -19px no-repeat;}
+#rockriver.graphic-novel .divider.graphicwhite {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -19px no-repeat;}
 #rockriver .clothespin{padding:15px 0 15px 15px;}
 #rockriver .after-that-i-felt-unsafe{}
 #set-up-for-failure{background-color:#ABDEA6;}

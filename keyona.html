@@ -73,11 +73,11 @@ body{
 				<div class='advert center' data-ad-type='leaderboard'></div>
 			</div>
 			{% include '_social-row.html' %}
-			<h1 class='text-center'>Talking <span class='white'><br class='visible-phone' />Truth</span></h1>
+			<h1 class='text-center'>Talking <span class='graphicwhite'><br class='visible-phone' />Truth</span></h1>
 			<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
 			<div id='intro' class='panel-wrapper'>
 				<img class='text-center' src='img/keyona/day2-frame1.jpg' />
-				<p class='white hidden-phone'>{{ graphictext('frame1') }}</p>			
+				<p class='graphicwhite hidden-phone'>{{ graphictext('frame1') }}</p>			
 				{{ graphictext('frame1', 'true', 'visible-phone shift-up ') }}
 			</div>
 			<section class='gn-river'>
@@ -104,14 +104,14 @@ body{
 							<img class='border' src='img/keyona/day2-frame5.jpg' />
 						</div>
 						<div class='span6'>
-							{{ graphictext('frame3', 'true', 'hidden-phone') }}
-							{{ graphictext('frame3', 'true', 'shift-up visible-phone') }}
+							{{ graphictext('frame5', 'true', 'hidden-phone') }}
+							{{ graphictext('frame5', 'true', 'shift-up visible-phone') }}
 						</div>
 					</div>
 				</div>
 				<div class='divider'></div>
 			</section>
-			<h2 class='white text-center'>{{ graphictext('frame11a') }}</h2>
+			<h2 class='graphicwhite text-center'>{{ graphictext('frame11a') }}</h2>
 			<section class='gn-river'>
 				<div class='row-fluid'>
 					<div class='span8'>
@@ -134,7 +134,7 @@ body{
 
 				<div class='divider'></div>
 			</section>
-			<h2 class='text-center white'>{{ graphictext('frame6a') }}</h2>
+			<h2 class='text-center graphicwhite'>{{ graphictext('frame6a') }}</h2>
 			<section class='gn-river'>
 
 				<div class='panel-wrapper med-slim'>
@@ -142,7 +142,7 @@ body{
 					<img id='elevator1' class='border text-center' src='img/keyona/day2-frame6.jpg' />
 					{{ graphictext('frame6b', 'true', 'shift-right shift-up') }}
 				</div>
-				<h2 id='come-on' class='white text-center'>{{ keyona.comeon.blurb }}</h2>
+				<h2 id='come-on' class='graphicwhite text-center'>{{ keyona.comeon.blurb }}</h2>
 				
 				<div class='panel-wrapper'>
 					<img class='border text-center' src='img/keyona/day2-frame7.jpg' />
@@ -174,7 +174,7 @@ body{
 				</div>
 				<div class='divider'></div>
 			</section>
-			<h2 class='white text-center'>{{ graphictext('frame11c') }}</h2>
+			<h2 class='graphicwhite text-center'>{{ graphictext('frame11c') }}</h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>
 					<div class='row-fluid'>
@@ -245,7 +245,7 @@ body{
 				</div>
 			</section>
 			<div class='divider visible-phone'></div>
-			<h2 class='text-center'><span class='white'>{{ graphictext('frame20') }}</h2>
+			<h2 class='text-center'><span class='graphicwhite'>{{ graphictext('frame20') }}</h2>
 			<img class='make-center' src='img/keyona/day2-frame20.jpg' />
 
 			<section class='footnotes text-center'>
@@ -254,7 +254,7 @@ body{
 				<ul class='unstyled'>
 					{% for row in keyonafootnotes[1:] %}
 					<li id='footnote{{ row.numeral|int }}'>
-						<p class='text-center'><strong class='white'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
+						<p class='text-center'><strong class='graphicwhite'>{{ row.numeral|int }}. </strong>{{ row.footnote|process_text() }} <a class='return' href='#{{ row.return }}-footnote'>&raquo; RETURN</a></p>
 					</li>	
 					{% endfor %}
 				</ul>	
