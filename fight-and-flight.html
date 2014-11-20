@@ -1,22 +1,42 @@
 {% extends "_base.html" %}
 
-{% block paywall %}
-    {% if PREVIEW_SERVER %}
-        {% include "_paywall_stage.html" %}
-    {% else %}
-        {% include "_paywall_prod.html" %}
-    {% endif %}
-{% endblock paywall %}
 
 
 {% block scripts %}
 <script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
-
 <script type='text/javascript' src='js/app.js'></script>
+<script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/registration-global.js?v=15"></script>    
+<script>
+	 registration.manager.config.initialize({    
+			productCode: "chinews",     
+			brandingSiteName: "chicagotribune.com",      
+			registrationHostname: "https://chinews.signon.trb.com",     
+			metricsCookieName: "metrics_id"     
+	 });    
+</script>    
+<!--SSOR End-->     
+<!--Meter Start-->    
+<script>
+
+jQuery.ajax({     
+	 url: '//' +     
+	 (location.protocol=='https:' ? 's' : 'www') +     
+	 '.tribdss.com/meter/ctcweb.js',      
+	 dataType: 'script',     
+	 cache: true,     
+	 success: function() {     
+			trb.meteringService.modalCloseUrl = 'http://graphics.chicagotribune.com/news/watchdog/rtc/graphic-novels/modal-close.html?';     
+	 }     
+});    
+</script>    
+<!--Meter End-->
+
 {% endblock %}
 
 {% block css %}
-
+<!--SSOR Start CSS -->      
+<link href="http://www.chicagotribune.com/hive/stylesheets/ssor.css" media="all" rel="stylesheet" type="text/css" />     
+<link href="http://www.chicagotribune.com/hive/stylesheets/registration_signin/registration.css?v=15" media="all" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/styles.css?gjhkdlfghdfkjh">
 <style type="text/css">
 body{/*background-color:#abdea6*/;background-color:#73C56A;}
@@ -26,6 +46,7 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 {% block meta %}
 <meta property="fb:app_id" content="306836229411287" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>TTTT</title>
 {% endblock %}
 
 

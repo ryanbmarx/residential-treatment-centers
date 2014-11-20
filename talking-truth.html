@@ -1,12 +1,12 @@
 {% extends "_base.html" %}
 
-{% block paywall %}
+{# block paywall %}
     {% if PREVIEW_SERVER %}
         {% include "_paywall_stage.html" %}
     {% else %}
         {% include "_paywall_prod.html" %}
     {% endif %}
-{% endblock paywall %}
+{% endblock paywall #}
 
 {% block scripts %}
 <script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
