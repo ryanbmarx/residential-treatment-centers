@@ -107,7 +107,15 @@ a.footnote{
 .graphic-novel .med-slim{max-width:600px;display:block;margin:15px auto;}
 
 
+
 .border{border:2px solid black;}
+div.border, img.border{
+	border:2px solid black;
+	border-width:3px;
+	-webkit-border-image: url('../img/border.png') 3 3 3 3 repeat;
+	border-image: url('../img/border.png') 3 3 3 3 repeat;
+
+}
 
 div.border-caption {
 	width: 80%;
