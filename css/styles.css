@@ -149,13 +149,13 @@ div.border-caption {
 .bottom-border{background-position: bottom center;}
 
 
-.border-caption.shift-up{margin-top:-20px; }
+.panel-wrapper.shift-up, .border-caption.shift-up{margin-top:-20px; }
 .span12 .border-caption.shift-up{margin-top:-40px; }
-/*#indianoaks .border-caption.shift-down, */.border-caption.shift-down{margin-bottom:-20px;}
+.border-caption.shift-down{margin-bottom:-20px;}
 .border-caption.shift-left{margin-left:-20px;}
 .border-caption.shift-left.shift-up, .border-caption.shift-left.shift-down{margin-left:15px;}
 .border-caption.shift-right{margin-right:15px;}
-.border-caption.shift-up-max{margin-top:-50px;}
+.panel-wrapper.shift-up-max, .border-caption.shift-up-max{margin-top:-50px;}
 .border-caption.wide{width:95%;}
 
 .vert-border{
@@ -184,10 +184,22 @@ div.border-caption {
 #keyona #intro p{position:absolute;top:150px;left:550px;max-width: 320px;}
 #life-woman{background-color: #81b8f1;padding-top:80px;}
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
+#client-disregards .border-caption{
+	position: absolute;
+	right: 0;
+	top: 310px;
+	max-width: 200px
+}
+
+#client-disregards img {
+/*	position: absolute;
+	right: 0;
+	top: 310px;
+*/
+}
 #come-on{font-size:180px;margin: 5px 0 25px 0;font-weight: bold}
 #quotes{padding-top:25px;margin-top:25px;}
 #penultimate-quotes .border-caption {margin-bottom:35px;}
-
 #penultimate-quotes h3{padding: 0 20px;background-color:#fff;}
 
 /* SPECIAL FOR INDIAN OAKS */
@@ -260,8 +272,8 @@ div.border-caption {
 	#DCFS-take{margin-top:-25px;}
 	#life-woman{padding-top:0;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
-	#come-on {font-size: 160px;}
-	.span12 .border-caption.shift-up{margin-top:-8px; }
+	#come-on {font-size: 160px;line-height: 0.8em;margin-bottom: 60px;}
+	/*.span12 .border-caption.shift-up{margin-top:-8px; }*/
 	.promo-panel{width:100%;float:none;}
 /*	.graphic-novel h1{font-size:60px;}
 	.graphic-novel h2{font-size:28px;}*/
