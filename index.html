@@ -6,15 +6,16 @@
 <script type='text/javascript' src='js/app.js'></script>
 {% endblock %}
 
+{% block bodyattrs %}
+    {{ super() }}
+    id='landing'
+{% endblock bodyattrs %}
+
 {% block css %}
 
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-<style type="text/css">
-
-  body {padding-right: 0;padding-left: 0;}
-</style>
 
 {% endblock %}
 
@@ -35,38 +36,85 @@
 
 {% block content %}
 
+<article class='graphic-novel'>
+  <section id='graphic-promos' >
+    <a href='talking-truth.html' id='keyona' class='promo-panel' data-mh='promo'>
+      <div class='promo-panel-inner'>
+       <img src='img/keyona/day2-frame1.jpg' />
+       <h2>Talking truth</h2>
+       <p>{{ keyona.teaser.blurb }}</p>
+       <p class='return'>&raquo; READ THIS STORY</p>
+     </div>
+   </a>
+   <a href='unsafe-haven.html' id='indianoaks' class='promo-panel' data-mh='promo'>
+    <div class='promo-panel-inner'>
+     <img src='img/indianoaks/frame00-d3.jpg' />
+     <h2>Unsafe Haven</h2>
+     <p>{{ indianoaks.teaser.blurb }}</p>
+     <p class='return'>&raquo; READ THIS STORY</p>
 
-<article id='graphic-promos' class='graphic-novel'>
-  {% include '_social-row.html' %}
-  <!-- <a class="brand" href="http://www.chicagotribune.com"><img class="ct-logo" src="http://media.apps.chicagotribune.com/images/logo_inverse.png" title="Chicago Tribune" alt="Chicago Tribune"></a> -->
-            <a href='talking-truth.html' id='keyona' class='promo-panel' data-mh='promo'>
-              <div class='promo-panel-inner'>
-               <img src='img/keyona/day2-frame1.jpg' />
-               <h2>Talking truth</h2>
-               <p>{{ keyona.teaser.blurb }}</p>
-               <p class='return'>&raquo; READ THIS STORY</p>
-              </div>
-           </a>
-           <a href='unsafe-haven.html' id='indianoaks' class='promo-panel' data-mh='promo'>
-            <div class='promo-panel-inner'>
-             <img src='img/indianoaks/frame00-d3.jpg' />
-             <h2>Unsafe Haven</h2>
-             <p>{{ indianoaks.teaser.blurb }}</p>
-             <p class='return'>&raquo; READ THIS STORY</p>
+   </div>
+ </a>
+ <a href='fight-and-flight.html' id='rockriver' class='promo-panel' data-mh='promo'>
+  <div class='promo-panel-inner'>
+    <img src='img/rockriver/frame10-d4.jpg' />
+    <h2>Fight & Flight</h2>
+    <p>{{ rockriver.teaser.blurb }}</p>
+    <p class='return'>&raquo; READ THIS STORY</p>
+  </div>
+</a>
+<div class='clearfix'></div>
+</section>
+{% include '_social-row.html' %}
+<section class='credits  gn-river'>
+  <div class='divider'></div>
+  <div class='row-fluid'>
+        <div class='span5'>
+      <h2 class=''>About this project</h2>
+      <p><em>{{ disclaimer }}</em></p>
+    </div>
+    <div class='span5 offset2'>
+      <h2>Credits</h2>
+  <h3>{{ rick_label }}</h3>
+  <p>
+    <span class=''>
+      <a href='{{ credits.rick.email }}'>{{ credits.rick.name}}</a>
+      <a href='http://twitter.com/{{ credits.rick.twitter }}'>(@{{ credits.rick.twitter }})</a>
+    </span>
+  </p>
+  <h3>{{ ryan_label }}</h3>
+  <p>
+    <span class=''>
+      <a href='{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a>
+      <a href='http://twitter.com/{{ credits.ryan.twitter }}'>(@{{ credits.ryan.twitter }})</a>
+    </span>
+  </p>
+  <p class=''>
+    <a href='http://twitter.com/chitribgraphics' target='_blank'>@ChiTribGraphics</a>
+  </p>
+  <h3>{{ reporters_label }}</h3>
+  <p>
+    <span class=''>
+      <a href='{{ credits.david.email }}'>{{ credits.david.name}}</a>
+      <a href='http://twitter.com/{{ credits.david.twitter }}'>(@{{ credits.david.twitter }})</a>
+    </span>
+  </p>
+  <p>
+    <span class=''>
+      <a href='{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a>
+      <a href='http://twitter.com/{{ credits.duaa.twitter }}'>(@{{ credits.duaa.twitter }})</a>
+    </span> 
+  </p>
+  <p>
+    <span class=''>
+      <a href='{{ credits.gary.email }}'>{{ credits.gary.name}}</a>
+      <a href='http://twitter.com/{{ credits.gary.twitter }}'>(@{{ credits.gary.twitter }})</a>
+    </span>
+  </p>
+    </div>
+  </div>
+  </section>
 
-           </div>
-         </a>
-         <a href='fight-and-flight.html' id='rockriver' class='promo-panel' data-mh='promo'>
-          <div class='promo-panel-inner'>
-            <img src='img/rockriver/frame10-d4.jpg' />
-            <h2>Fight & Flight</h2>
-            <p>{{ rockriver.teaser.blurb }}</p>
-             <p class='return'>&raquo; READ THIS STORY</p>
-
-          </div>
-        </a>
-        <div class='clearfix'></div>
-      </div> 
 </article> 
 
 {% endblock content %}

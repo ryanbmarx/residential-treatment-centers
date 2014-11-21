@@ -70,12 +70,14 @@ ul p, ol p{font-size: 16px}
 /*#intro h1{font-size:60px;line-height: 1.2em}*/
 /* GRAPHIC NOVEL STYLES */
 
+body#landing {padding-right: 0;padding-left: 0;}
 body#fight-and-flight{/*background-color:#abdea6*/;background-color:#73C56A;}
 body#talking-truth{background-color:#62A5EF;}
 body#unsafe-haven{background-color:#EBB145;}
 
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
+#landing article.graphic-novel{max-width:100%;margin: 0;padding:0;}
 .graphic-novel p, .graphic-novel h1,.graphic-novel h2, .graphic-novel h3,.graphic-novel h4, .graphic-novel h5{ 
 font-family:'Arial', sans-serif;font-family: 'CCMoritat', sans-serif;color:#000;line-height:1em;margin-top:0;margin-bottom:0}
 .graphic-novel h1{font-size: 120px;font-family:'CCMoritat-BoldItalic';margin-bottom:15px;}
@@ -84,18 +86,7 @@ font-family:'Arial', sans-serif;font-family: 'CCMoritat', sans-serif;color:#000;
 .graphic-novel p{font-size: 24px;line-height: 1.2em;margin:10px 0 20px 0;}
 
 
-a.footnote{
-	display:inline;
-	padding:2px 3px;
-	border-radius: 3px;
-	vertical-align: super; 
-	color:#fff;
-	background-color: #000;
-	font-size: 12px;
-	margin-bottom:12px;
-	font-family: 'arial black', 'arial', sans-serif;
-	font-weight: bolder;
-}
+a.footnote{display:inline;padding:2px 3px;border-radius: 3px;vertical-align: super; color:#fff;background-color: #000;font-size: 12px;margin-bottom:12px;font-family: 'arial black', 'arial', sans-serif;font-weight: bolder;}
 .graphic-novel a.footnote:hover{background-color: #333;text-decoration: none;}
 .graphic-novel .graphicwhite a.footnote{color:#62A5EF;background-color: #fff;}
 .graphic-novel .graphicwhite a.footnote:hover{background-color: #E1E8FB;}
@@ -104,13 +95,13 @@ a.footnote{
 .graphic-novel a:hover{text-decoration: underline}
 
 .graphic-novel .divider {
-	background: url('../img/rule-horiz.png') #62A5EF center -5px no-repeat;
+	background: url('../img/rule-horiz.png') #fff center -5px no-repeat;
 	height: 8px;
 	margin: 35px 0;
 }
 
 .graphic-novel .divider.graphicwhite {
-	background: url('../img/rule-horiz.png') #62A5EF center -19px no-repeat;
+	background: url('../img/rule-horiz.png') #fff center -19px no-repeat;
 }
 
 .graphic-novel .graphicwhite a, .graphic-novel .graphicwhite{color:#fff;}
@@ -198,6 +189,9 @@ div.border-caption {
 
 /* HAND-PLACED TEXT ELEMENTS */
 
+
+#keyona.graphic-novel .divider {background: url('../img/keyona/rule-horiz.png') #62A5EF center -5px no-repeat;}
+#keyona.graphic-novel .divider.graphicwhite {background: url('../img/keyona/rule-horiz.png') #62A5EF center -19px no-repeat;}
 #keyona #intro p{position:absolute;top:150px;left:550px;max-width: 320px;}
 #life-woman{background-color: #81b8f1;padding-top:80px;}
 #life-woman p{position:absolute;top:0px;left:0px;max-width: 320px;padding:15px 0 0 15px;font-size: 36px}
@@ -206,13 +200,6 @@ div.border-caption {
 	right: 0;
 	top: 310px;
 	max-width: 200px
-}
-
-#client-disregards img {
-/*	position: absolute;
-	right: 0;
-	top: 310px;
-*/
 }
 #come-on{font-size:180px;margin: 5px 0 25px 0;font-weight: bold}
 #quotes{padding-top:25px;margin-top:25px;}
@@ -252,10 +239,12 @@ div.border-caption {
 
 /* PROMOS */
 #graphic-promos {max-width: 100%;}
-#graphic-promos ul#social-menu{ background-color: #0D1123;width: 100%;margin-top: -6px;padding-bottom: 20px;max-width: 100%}
+#landing ul#social-menu{ background-color:#fff;width: 100%; margin-top:25px;max-width: 100%;}
+#landing #social-menu li a{color: #000;opacity:.5;}
+#landing #social-menu li a:hover{color: #000;opacity:1;}
 .promo-panel{/*width:33%;*/overflow:hidden;float:left;display:table;overflow:hidden;text-align: center;}
-article#graphic-promos .promo-panel{width:33%;}
-article#graphic-promos #indianoaks {width:34%;}
+#landing #graphic-promos .promo-panel{width:33%;}
+#landing #graphic-promos #indianoaks {width:34%;}
 .promo-panel-inner{padding:20px;/*display:table-cell;vertical-align: middle*/ }
 #graphic-promos img{width: 100%;}
 #graphic-promos:hover p,#graphic-promos:hover h2, #graphic-promos:hover img{opacity:.3;}
@@ -266,14 +255,7 @@ article#graphic-promos #indianoaks {width:34%;}
 #graphic-promos #indianoaks img{width: 75%;}
 #graphic-promos #rockriver{background-color:#abdea6;}
 
-
-
 }
-
-
-
-
-.row-fluid .span4NoGutter { width:33.33333%; margin-left:0 }
 
 
 @media (max-width: 1028px){
@@ -291,10 +273,7 @@ article#graphic-promos #indianoaks {width:34%;}
 	#life-woman{padding-top:0;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
 	#come-on {font-size: 160px;line-height: 0.8em;margin-bottom: 60px;}
-	/*.span12 .border-caption.shift-up{margin-top:-8px; }*/
 	.promo-panel{width:100%;float:none;}
-/*	.graphic-novel h1{font-size:60px;}
-	.graphic-novel h2{font-size:28px;}*/
 	#graphic-promos #indianoaks {width: 100%;}
 
 }
