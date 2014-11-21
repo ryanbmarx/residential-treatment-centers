@@ -1,7 +1,8 @@
 {% extends "_base.html" %}
 
 {% block bodyattrs %} 
-	id='unsafe-haven'
+    {{ super() }}
+    id='unsafe-haven'
 {% endblock bodyattrs %}
 
 {% block scripts %}
@@ -65,7 +66,10 @@
 
 
 {% endmacro%}
-	{% include '_graphic-novel-ad.html' %}
+<div class='graphic-novel-advert-wrapper'>
+		<div class='advert center' data-ad-type='leaderboard'></div>
+		<p><small>ADVERTISEMENT</small></p>
+	</div>
 	<div class="container-fluid">
 		<article id='indianoaks' class='graphic-novel'>
 			{% include '_social-row.html' %}
@@ -142,6 +146,7 @@
 			</section>
 
 			<section class='footnotes text-center'>
+				{% include '_promos.html'%}
 				{% include '_about-and-credits.html'%}
 				<h2 class='text-center'>Footnotes</h2>
 				<ul class='unstyled'>

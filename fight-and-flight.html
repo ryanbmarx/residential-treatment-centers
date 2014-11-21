@@ -1,7 +1,8 @@
 {% extends "_base.html" %}
 
 {% block bodyattrs %} 
-	id='fight-and-flight'
+    {{ super() }}
+    id='fight-and-flight'
 {% endblock bodyattrs %}
 
 
@@ -205,6 +206,7 @@ jQuery.ajax({
 			<div class='divider visible-phone'></div>
 			
 			<section class='footnotes text-center'>
+				{% include '_promos.html'%}
 				{% include '_about-and-credits.html'%}
 				<h2 class='text-center'>Footnotes</h2>
 				<ul class='unstyled'>

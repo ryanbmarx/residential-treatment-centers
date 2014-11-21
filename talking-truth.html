@@ -1,6 +1,7 @@
 {% extends "_base.html" %}
 
 {% block bodyattrs %} 
+    	{{ super() }}
 	id='talking-truth'
 {% endblock bodyattrs %}
 
@@ -242,6 +243,7 @@ body{
 		<img class='make-center' src='img/keyona/day2-frame20.jpg' />
 
 		<section class='footnotes text-center'>
+			{% include '_promos.html'%}
 			{% include '_about-and-credits.html' %}
 			<h2 class='text-center'>Footnotes</h2>
 			<ul class='unstyled'>
