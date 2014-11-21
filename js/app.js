@@ -14,7 +14,7 @@ var add_facebook_comments = function() {
 };
 
 $(document).ready(function(){
-	$('.promo-panel').matchHeight();
+	$("a[data-mh*='promo'] div").matchHeight();
   // Load FB comments
   if ( $('meta[property="fb:app_id"]').length > 0 )
     add_facebook_comments();

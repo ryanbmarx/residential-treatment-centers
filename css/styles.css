@@ -224,9 +224,9 @@ div.border-caption {
 /* PROMOS */
 #graphic-promos {max-width: 100%;}
 #graphic-promos ul#social-menu{ background-color: #0D1123;width: 100%;margin-top: -6px;padding-bottom: 20px;max-width: 100%}
-.promo-panel{width:33%;overflow:hidden;float:left;display:table;overflow:hidden;text-align: center;}
-#graphic-promos #indianoaks {width:34%;}
-.promo-panel-inner{padding:20px;display:table-cell;vertical-align: middle }
+.promo-panel{/*width:33%;*/overflow:hidden;float:left;display:table;overflow:hidden;text-align: center;}
+/*#graphic-promos #indianoaks {width:34%;}*/
+.promo-panel-inner{padding:20px;/*display:table-cell;vertical-align: middle*/ }
 #graphic-promos img{width: 100%;}
 #graphic-promos:hover p,#graphic-promos:hover h2, #graphic-promos:hover img{opacity:.3;}
 #graphic-promos a:hover {text-decoration: none;}
