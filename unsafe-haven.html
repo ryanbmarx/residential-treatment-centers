@@ -1,12 +1,8 @@
 {% extends "_base.html" %}
 
-{# block paywall %}
-    {% if PREVIEW_SERVER %}
-        {% include "_paywall_stage.html" %}
-    {% else %}
-        {% include "_paywall_prod.html" %}
-    {% endif %}
-{% endblock paywall #}
+{% block bodyattrs %} 
+	id='unsafe-haven'
+{% endblock bodyattrs %}
 
 {% block scripts %}
 <script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
@@ -16,10 +12,6 @@
 {% block css %}
 
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<style type="text/css">
-	body{background-color:#EBB145;}
-</style>
-
 {% endblock %}
 
 {% block meta %}
@@ -73,12 +65,10 @@
 
 
 {% endmacro%}
+	{% include '_graphic-novel-ad.html' %}
 	<div class="container-fluid">
 		<article id='indianoaks' class='graphic-novel'>
-			<div class='advert-wrapper'>
-				<div class='advert center' data-ad-type='leaderboard'></div>
-			</div>
-					{% include '_social-row.html' %}
+			{% include '_social-row.html' %}
 			<section id='intro'>
 				<img src='img/indianoaks/frame00-d3.jpg' />
 				<h1 class='text-center'>Unsafe<span class='graphicwhite'><br class='visible-phone' />Haven</span></h1>

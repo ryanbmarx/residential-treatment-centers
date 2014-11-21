@@ -1,12 +1,8 @@
 {% extends "_base.html" %}
 
-{# block paywall %}
-{% if PREVIEW_SERVER %}
-{% include "_paywall_stage.html" %}
-{% else %}
-{% include "_paywall_prod.html" %}
-{% endif %}
-{% endblock paywall #}
+{% block bodyattrs %} 
+	id='talking-truth'
+{% endblock bodyattrs %}
 
 {% block scripts %}
 <script src="js/jquery.matchHeight-min.js" type="text/javascript"></script>
@@ -61,17 +57,9 @@ body{
 
 
 	{% endmacro%}
-
-	<style type="text/css">
-	
-
-	</style>
-
+	{% include '_graphic-novel-ad.html' %}
 	<div class="container-fluid">
 		<article id='keyona' class='graphic-novel'>
-			<div class='advert-wrapper'>
-				<div class='advert center' data-ad-type='leaderboard'></div>
-			</div>
 			{% include '_social-row.html' %}
 			<h1 class='text-center'>Talking <span class='graphicwhite'><br class='visible-phone' />Truth</span></h1>
 			<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>

@@ -26,6 +26,17 @@ ul p, ol p{font-size: 16px}
 
 /* advert wrapper */
 .advert-wrapper {margin-top:25px;margin-bottom:25px;}
+.graphic-novel-advert-wrapper{padding: 25px 0 15px 0;margin: -6px 0 25px 0;background-color: #fff;text-align: center;}
+#unsafe-haven .graphic-novel-advert-wrapper{border-bottom:4px solid #D97C14;}
+#fight-and-flight .graphic-novel-advert-wrapper{border-bottom:4px solid #24961D;}
+#talking-truth .graphic-novel-advert-wrapper{border-bottom:4px solid #117CC1;}
+
+
+.graphic-novel-advert-wrapper p small {
+	font-family: 'Arial',sans-serif;
+	color:#888;
+}
+
 .right{float:right;margin:25px 0 25px 25px;}
 
 /* limit content to a 768px, horizontally centered grouping */
@@ -58,6 +69,10 @@ ul p, ol p{font-size: 16px}
 /*INTRODUCTION STYLES*/
 /*#intro h1{font-size:60px;line-height: 1.2em}*/
 /* GRAPHIC NOVEL STYLES */
+
+body#fight-and-flight{/*background-color:#abdea6*/;background-color:#73C56A;}
+body#talking-truth{background-color:#62A5EF;}
+body#unsafe-haven{background-color:#EBB145;}
 
 
 article.graphic-novel{max-width: 1020px;margin: 0 auto;}
@@ -113,6 +128,8 @@ div.border, img.border{
 	border:2px solid black;
 	border-width:3px;
 	-webkit-border-image: url('../img/border.png') 3 3 3 3 repeat;
+	-moz-border-image: url('../img/border.png') 3 3 3 3 repeat;
+	-o-border-image: url('../img/border.png') 3 3 3 3 repeat;
 	border-image: url('../img/border.png') 3 3 3 3 repeat;
 
 }
@@ -237,7 +254,8 @@ div.border-caption {
 #graphic-promos {max-width: 100%;}
 #graphic-promos ul#social-menu{ background-color: #0D1123;width: 100%;margin-top: -6px;padding-bottom: 20px;max-width: 100%}
 .promo-panel{/*width:33%;*/overflow:hidden;float:left;display:table;overflow:hidden;text-align: center;}
-/*#graphic-promos #indianoaks {width:34%;}*/
+article#graphic-promos .promo-panel{width:33%;}
+article#graphic-promos #indianoaks {width:34%;}
 .promo-panel-inner{padding:20px;/*display:table-cell;vertical-align: middle*/ }
 #graphic-promos img{width: 100%;}
 #graphic-promos:hover p,#graphic-promos:hover h2, #graphic-promos:hover img{opacity:.3;}

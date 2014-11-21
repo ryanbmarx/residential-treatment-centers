@@ -1,5 +1,8 @@
 {% extends "_base.html" %}
 
+{% block bodyattrs %} 
+	id='fight-and-flight'
+{% endblock bodyattrs %}
 
 
 {% block scripts %}
@@ -38,9 +41,6 @@ jQuery.ajax({
 <link href="http://www.chicagotribune.com/hive/stylesheets/ssor.css" media="all" rel="stylesheet" type="text/css" />     
 <link href="http://www.chicagotribune.com/hive/stylesheets/registration_signin/registration.css?v=15" media="all" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/styles.css?gjhkdlfghdfkjh">
-<style type="text/css">
-body{/*background-color:#abdea6*/;background-color:#73C56A;}
-</style>
 {% endblock %}
 
 {% block meta %}
@@ -83,17 +83,9 @@ body{/*background-color:#abdea6*/;background-color:#73C56A;}
 
 
 	{% endmacro%}
-
-	<style type="text/css">
-	
-
-	</style>
-
+	{% include '_graphic-novel-ad.html' %}
 	<div class="container-fluid">
 		<article id='rockriver' class='graphic-novel'>
-			<div class='advert-wrapper'>
-				<div class='advert center' data-ad-type='leaderboard'></div>
-			</div>
 			{% include '_social-row.html' %}
 			<h1 class='text-center'>Fight <span class='graphicwhite'>and <br class='visible-phone' /></span>Flight</h1>
 			<h2 class='text-center'>{{ rockriver.subhede.blurb}}</h2>
