@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
+{% set title="gjdflkgjkdlfgjdflk" %}
 
 {% endblock %}
 
@@ -27,7 +28,7 @@
 <meta itemprop="image" content="">
 <meta itemprop="description" content="">
 <meta itemprop="publisher" content="Chicago Tribune">
-<meta itemprop="datePublished" content="">
+<meta itemprop="datePublished" content="{{ date }}">
 <meta name="keywords" content="Chicago, Illinois, residential treatment centers, foster care, foster home">
 <meta name="description" content="">
 <meta itemprop="thumbnailUrl" content ="XX">
@@ -36,7 +37,7 @@
 
 {% block content %}
 
-<article class='graphic-novel'>
+<article class='graphic-novel' itemscope itemtype='http://schema.org/WebPage'>
   <section id='graphic-promos' >
     <a href='talking-truth.html' id='keyona' class='promo-panel' data-mh='promo'>
       <div class='promo-panel-inner'>
@@ -72,20 +73,23 @@
         <div class='span5'>
       <h2 class=''>About this project</h2>
       <p><em>{{ disclaimer }}</em></p>
+      <p class=''><small>Published: <span itemprop='datePublished' >{{ date }}</span></p>
+      <p class=''>By <span itemprop="publisher">Chicago Tribune</span></small></p>
+
     </div>
     <div class='span5 offset2'>
       <h2>Credits</h2>
   <h3>{{ rick_label }}</h3>
   <p>
-    <span class=''>
-      <a href='{{ credits.rick.email }}'>{{ credits.rick.name}}</a>
+    <span class='' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+      <a itemtype='name' href='{{ credits.rick.email }}'>{{ credits.rick.name}}</a>
       <a href='http://twitter.com/{{ credits.rick.twitter }}'>(@{{ credits.rick.twitter }})</a>
     </span>
   </p>
   <h3>{{ ryan_label }}</h3>
   <p>
-    <span class=''>
-      <a href='{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a>
+    <span class='' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+      <a itemprop='name' href='{{ credits.ryan.email }}'>{{ credits.ryan.name}}</a>
       <a href='http://twitter.com/{{ credits.ryan.twitter }}'>(@{{ credits.ryan.twitter }})</a>
     </span>
   </p>
@@ -94,20 +98,20 @@
   </p>
   <h3>{{ reporters_label }}</h3>
   <p>
-    <span class=''>
-      <a href='{{ credits.david.email }}'>{{ credits.david.name}}</a>
+    <span class='' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+      <a itemprop='name' href='{{ credits.david.email }}'>{{ credits.david.name}}</a>
       <a href='http://twitter.com/{{ credits.david.twitter }}'>(@{{ credits.david.twitter }})</a>
     </span>
   </p>
   <p>
-    <span class=''>
-      <a href='{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a>
+    <span class='' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+      <a itemprop='name' href='{{ credits.duaa.email }}'>{{ credits.duaa.name}}</a>
       <a href='http://twitter.com/{{ credits.duaa.twitter }}'>(@{{ credits.duaa.twitter }})</a>
     </span> 
   </p>
   <p>
-    <span class=''>
-      <a href='{{ credits.gary.email }}'>{{ credits.gary.name}}</a>
+    <span class='' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+      <a itemprop='name' href='{{ credits.gary.email }}'>{{ credits.gary.name}}</a>
       <a href='http://twitter.com/{{ credits.gary.twitter }}'>(@{{ credits.gary.twitter }})</a>
     </span>
   </p>

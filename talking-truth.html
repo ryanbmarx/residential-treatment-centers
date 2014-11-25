@@ -25,6 +25,8 @@ body{
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 {% endblock %}
 
+{% block title %}{{ keyona.hede.blurb|striptags }} -- Chicago Tribune{% endblock title %}
+
 
 {% block content %}
 
@@ -62,7 +64,7 @@ body{
 	<div class="container-fluid">
 		<article id='keyona' class='graphic-novel'>
 			{% include '_social-row.html' %}
-			<h1 class='text-center'>Talking <span class='graphicwhite'><br class='visible-phone' />Truth</span></h1>
+			<h1 itemprop='headline' class='text-center'>{{ keyona.hede.blurb|process_text }}</h1>
 			<h2 class='text-center'>{{ keyona.subhede.blurb}}</h2>
 			<div id='intro' class='panel-wrapper'>
 				<img class='text-center' src='img/keyona/day2-frame1.jpg' />

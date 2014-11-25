@@ -1,5 +1,8 @@
 {% extends "_base.html" %}
 
+
+{% block title %}{{ rockriver.hede.blurb|striptags }} -- Chicago Tribune{% endblock title %}
+
 {% block bodyattrs %} 
     {{ super() }}
     id='fight-and-flight'
@@ -86,9 +89,9 @@ jQuery.ajax({
 	{% endmacro%}
 	{% include '_graphic-novel-ad.html' %}
 	<div class="container-fluid">
-		<article id='rockriver' class='graphic-novel'>
+		<article id='rockriver' class='graphic-novel' itemscope itemtype='http://schema.org/WebPage'>
 			{% include '_social-row.html' %}
-			<h1 class='text-center'>Fight <span class='graphicwhite'>and <br class='visible-phone' /></span>Flight</h1>
+			<h1 itemprop='headline' class='text-center'>{{ rockriver.hede.blurb|process_text() }}</h1>
 			<h2 class='text-center'>{{ rockriver.subhede.blurb}}</h2>
 			<section class='gn-river'>
 				<div class='divider'></div>
