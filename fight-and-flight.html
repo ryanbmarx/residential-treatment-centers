@@ -50,8 +50,14 @@ jQuery.ajax({
 {% block meta %}
 <meta property="fb:app_id" content="306836229411287" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<title>TTTT</title>
+<meta itemprop="publisher" content="Chicago Tribune">
+<meta itemprop="datePublished" content="{{ date }}">
+<meta name="keywords" content="Chicago, Illinois, residential treatment centers, foster care, foster home, Rock River Academy, Rockford, Illinois, runaways, teen prostitution">
+<meta itemprop="alternativeHeadline" content="{{ rockriver.meta_alt_hede.blurb }}">
+<meta name="description" content="{{ rockriver.meta_desc.blurb }}">
+
 {% endblock %}
+
 
 
 {% block content %}
@@ -97,7 +103,7 @@ jQuery.ajax({
 				<div class='divider'></div>
 				<div class='panel-wrapper'>
 					{{ graphictext('frame1', 'true') }}
-					<img class='text-center' src='img/rockriver/frame01-d4.jpg' />	
+					<img itemprop='image' class='text-center' src='img/rockriver/frame01-d4.jpg' />	
 				</div>
 				<div class='panel-wrapper'>
 					<div class='row-fluid'>
@@ -106,7 +112,7 @@ jQuery.ajax({
 						</div>
 						<div class='span9'>
 							{{ graphictext('frame2', 'true', 'shift-down visible-phone') }}
-							<img class='border text-center' src='img/rockriver/frame02-d4.jpg' />
+							<img itemprop='image' class='border text-center' src='img/rockriver/frame02-d4.jpg' />
 
 						</div>
 					</div>
@@ -114,21 +120,21 @@ jQuery.ajax({
 				<div class='panel-wrapper'>
 					<div class='row-fluid'>
 						<div class='span6'>
-							<img class='text-center' src='img/rockriver/frame03-d4.jpg' />
+							<img itemprop='image' class='text-center' src='img/rockriver/frame03-d4.jpg' />
 							{{ graphictext('frame3', 'true', 'shift-up') }}
 						</div>
 						<div class='span6'>
-							<img class='text-center border' src='img/rockriver/frame04-d4.jpg' />
+							<img itemprop='image' class='text-center border' src='img/rockriver/frame04-d4.jpg' />
 							{{ graphictext('frame4', 'true', 'shift-up wide') }}
 						</div>				
 					</div>
 				</div>
 				<div class='panel-wrapper slim'>
-					<img class='text-center border' src='img/rockriver/frame05-d4.jpg' />
+					<img itemprop='image' class='text-center border' src='img/rockriver/frame05-d4.jpg' />
 					{{ graphictext('frame5', 'true', 'shift-up') }}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='text-center' src='img/rockriver/frame06-d4.jpg' />
+					<img itemprop='image' class='text-center' src='img/rockriver/frame06-d4.jpg' />
 					{{ graphictext('frame6b', 'true', 'text-center') }}
 				</div>
 				<div class='divider'></div>
@@ -136,17 +142,17 @@ jQuery.ajax({
 			<h2 class='text-center graphicwhite'>{{ rockriver.sub2.blurb }}</h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>		
-					<img class='border text-center' src='img/rockriver/frame07-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame07-d4.jpg' />
 					{{ graphictext('frame7', 'true', 'shift-up')}}
 				</div>
 				<div class='panel-wrapper'>		
 					<div class='row-fluid'>
 						<div class='span6'>
-							<img class='border text-center' src='img/rockriver/frame08-d4.jpg' />
+							<img itemprop='image' class='border text-center' src='img/rockriver/frame08-d4.jpg' />
 							{{ graphictext('frame8', 'true', 'shift-up')}}
 						</div>
 						<div class='span6'>
-							<img class='border text-center' src='img/rockriver/frame09-d4.jpg' />
+							<img itemprop='image' class='border text-center' src='img/rockriver/frame09-d4.jpg' />
 							{{ graphictext('frame9', 'true', 'shift-up')}}
 						</div>
 					</div>
@@ -156,50 +162,50 @@ jQuery.ajax({
 			<h2 class='text-center graphicwhite'>{{ rockriver.sub3.blurb }}</h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>	
-					<img class='border text-center' src='img/rockriver/frame10-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame10-d4.jpg' />
 					{{ graphictext('frame10', 'true', 'shift-up shift-left')}}
 				</div>
 				<div class='panel-wrapper'>	
 					{{ graphictext('frame11', 'true', 'shift-down shift-right')}}
-					<img class='border text-center' src='img/rockriver/frame11-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame11-d4.jpg' />
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border text-center' src='img/rockriver/frame12-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame12-d4.jpg' />
 					{{ graphictext('frame12', 'true', 'shift-up wide')}}
 				</div>
 				<div class='panel-wrapper'>
 					<div class='row-fluid'>
 						<div class='span7'>
-							<img class='border text-center' src='img/rockriver/frame13-d4.jpg' />
+							<img itemprop='image' class='border text-center' src='img/rockriver/frame13-d4.jpg' />
 							{{ graphictext('frame13', 'true', 'shift-up')}}
 						</div>
 						<div class='span5'>
-							<img class='border text-center' src='img/rockriver/frame14-d4.jpg' />
+							<img itemprop='image' class='border text-center' src='img/rockriver/frame14-d4.jpg' />
 							{{ graphictext('frame14', 'true', 'wide shift-up-max')}}
 						</div>
 					</div>
 				</div>
 				<div class='panel-wrapper med-slim'>
-					<img class='border text-center' src='img/rockriver/frame15-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame15-d4.jpg' />
 					{{ graphictext('frame15', 'true', 'shift-up')}}
 				</div>
 				<div class='panel-wrapper'>
-					<img class='border text-center' src='img/rockriver/frame16-d4.jpg' />
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame16-d4.jpg' />
 					{{ graphictext('frame16', 'true', 'shift-up')}}
 				</div>
 				<div class='panel-wrapper medium-slim'>
 					{{ graphictext('frame17a', 'true', 'wide shift-down')}}
-					<img class='border text-center' src='img/rockriver/frame17-d4.jpg' />	
+					<img itemprop='image' class='border text-center' src='img/rockriver/frame17-d4.jpg' />	
 					{{ graphictext('frame17b', 'true', 'shift-up text-center')}}
 				</div>
 						<div class='panel-wrapper'>
-							<img class=' text-center' src='img/rockriver/frame18-d4.jpg' />
+							<img itemprop='image' class=' text-center' src='img/rockriver/frame18-d4.jpg' />
 							{{ graphictext('frame18', 'true', 'shift-up')}}
 						</div>
 
 				<div id='set-up-for-failure' class='panel-wrapper border'>
 					<h3>{{ rockriver.frame19a.blurb }}</h3>
-					<img class='text-center' src='img/rockriver/frame19-d4.jpg' />
+					<img itemprop='image' class='text-center' src='img/rockriver/frame19-d4.jpg' />
 					<h2 class='graphicwhite'>{{ rockriver.frame19b.blurb }}</h2>
 
 				</div>
