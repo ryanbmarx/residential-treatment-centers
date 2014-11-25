@@ -8,7 +8,7 @@ Tarbell project configuration
 NAME = "rtc-graphic-novels"
 
 # Descriptive title of project
-TITLE = "Graphic Novels"
+TITLE = "Harsh Treatment"
 
 # Google spreadsheet key
 SPREADSHEET_KEY = "100sslz9219WdKg74DXztBedlf3VV_v5koVSxqTLtyBo"
@@ -26,10 +26,11 @@ S3_BUCKETS = {
     # then use tarbell publish mytarget to publish to it
     "production": "graphics.chicagotribune.com/news/watchdog/rtc",
     "staging": "graphics.beta.tribapps.com/rtc-graphic-novels",
+    "kaarin": "graphics.chicagotribune.com/rtc-graphic-novels-for-kaarin-and-only-for-her-eyes-dfhjskfhsd-dfhglkdfhgkjdf"
 }
 
 # Default template variables
 DEFAULT_CONTEXT = {
     'name': 'rtc-graphic-novels',
-    'title': 'Graphic Novels'
+    'title': 'Harsh Treatment'
 }
