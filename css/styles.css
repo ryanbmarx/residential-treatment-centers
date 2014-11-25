@@ -263,7 +263,9 @@ div.border-caption {
 	#come-on {font-size: 160px;line-height: 0.8em;margin-bottom: 60px;}
 	.promo-panel{width:100%;float:none;}
 	#graphic-promos #indianoaks {width: 100%;}
-
+	#landing #graphic-promos #indianoaks, #landing #graphic-promos .promo-panel {width: 100%;}
+	#landing section.credits h3, #landing section.credits h2, #landing section.credits p{ padding-left:15px; padding-right:15px;}
+	#graphic-promos:hover p, #graphic-promos:hover h2, #graphic-promos:hover img {opacity:1}
 }
 
 
