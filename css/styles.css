@@ -251,7 +251,16 @@ div.border-caption {
 	.affix{top:0;}	
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px){
+	.graphic-novel-advert-wrapper {margin-top:0;}
+}
+
+@media (max-width: 767px) {
+	body{padding:0}
+	article{padding: 0 25px;}
+	div.border-caption{width:90%;}
+	.span12 .border-caption.shift-up{margin-top:-15px;}
+	.panel-wrapper.shift-up-max, .border-caption.shift-up-max{margin-top:-15px;}
 	#keyona #intro p{ position:static;text-align: center;margin: 0 auto;max-width: 100%}
 	.advert-wrapper.right{float:none; margin: 25px 0;}
 	div.border-caption, p.border-caption{margin-bottom:15px;}
@@ -259,8 +268,8 @@ div.border-caption {
 	#quotes h3{text-align: center;padding:25px 15px;}
 	#DCFS-take{margin-top:-25px;}
 	#life-woman{padding-top:0;}
-	#life-woman p{position:static;max-width:100%;padding:25px 25px 0 25px;text-align: center;margin:0;}
-	#come-on {font-size: 160px;line-height: 0.8em;margin-bottom: 60px;}
+	#life-woman p{position:static;max-width:100%;padding:25px 25px 10px 25px;text-align: center;margin:0;font-size:26px;}
+	#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
 	.promo-panel{width:100%;float:none;}
 	#graphic-promos #indianoaks {width: 100%;}
 	#landing #graphic-promos #indianoaks, #landing #graphic-promos .promo-panel {width: 100%;}
