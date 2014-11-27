@@ -118,7 +118,7 @@ a.footnote{display:inline;padding:2px 3px;border-radius: 3px;vertical-align: sup
 
 .border{border:2px solid black;}
 div.border, img.border{
-	border:2px solid black;
+	border:1px solid black;
 	border-width:3px;
 	-webkit-border-image: url('../img/border.png') 3 3 3 3 repeat;
 	-moz-border-image: url('../img/border.png') 3 3 3 3 repeat;
