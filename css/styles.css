@@ -175,6 +175,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 #penultimate-quotes .border-caption {margin-bottom:35px;}
 #penultimate-quotes h3{padding: 0 20px;background-color:#fff;}
 
+
 /* SPECIAL FOR INDIAN OAKS */
 
 #indianoaks #intro img {display:block;margin:10px auto 0 auto;}
@@ -233,7 +234,6 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 }
 
 @media (max-width: 1000px){
-	body{background-color: red};
 	.graphic-novel-advert-wrapper {margin-top:0;}
 	.graphic-novel p{font-size:20px;}
 	.graphic-novel h2{font-size:35px;line-height:1.1em;}
@@ -254,6 +254,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 	#quotes h3{text-align: center;padding:25px 15px;}
 	#DCFS-take{margin-top:-25px;}
 	#life-woman{padding-top:0;}
+	#shadow {max-width:500px;margin:0 auto;display:block;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 10px 25px;text-align: center;margin:0;font-size:26px;}
 	#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
 	.promo-panel{width:100%;float:none;}
