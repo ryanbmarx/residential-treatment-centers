@@ -92,19 +92,10 @@ a.footnote{display:inline;padding:2px 3px;border-radius: 3px;vertical-align: sup
 .graphic-novel .graphicwhite a.footnote:hover{background-color: #E1E8FB;}
 .graphic-novel .black {color:#000;}
 .graphic-novel .graphicgrey{color:#888;}
-
-
 .graphic-novel a:hover{text-decoration: underline}
 
-.graphic-novel .divider {
-	background: url('../img/rule-horiz.png') #fff center -5px no-repeat;
-	height: 8px;
-	margin: 35px 0;
-}
-
-.graphic-novel .divider.graphicwhite {
-	background: url('../img/rule-horiz.png') #fff center -19px no-repeat;
-}
+.graphic-novel .divider {background: url('../img/rule-horiz.png') #fff center -5px no-repeat;height: 8px;margin: 35px 0;}
+.graphic-novel .divider.graphicwhite {background: url('../img/rule-horiz.png') #fff center -19px no-repeat;}
 
 .graphic-novel .graphicwhite a, .graphic-novel .graphicwhite{color:#fff;}
 .bg-white{background-color:#fff;}
@@ -123,21 +114,11 @@ div.border, img.border{
 	-webkit-border-image: url('../img/border.png') 3 3 3 3 repeat;
 	-moz-border-image: url('../img/border.png') 3 3 3 3 repeat;
 	-o-border-image: url('../img/border.png') 3 3 3 3 repeat;
-	border-image: url('../img/border.png') 3 3 3 3 repeat;
+	border-image: url('../img/border.png') 3 3 3 3 repeat;}
 
-}
+div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin: 0 auto 0 auto;padding:0;z-index: 100;position: relative;}
 
-div.border-caption {
-	width: 80%;
-	overflow-wrap: break-word;
-	overflow:hidden;
-	margin: 0 auto 0 auto;
-	padding:0;
-	z-index: 100;
-	position: relative; 
-}
-
-.border-caption p, .border-caption h2{background-color: #fff;padding: 0 15px 15px 15px;margin:0;}
+.border-caption p, .border-caption h2{background-color: #fff;padding: 0 15px 4px 15px;margin:0;}
 .graphic-novel .border-caption p:last-child{padding-bottom:0;}
 .border-caption h2{padding-bottom: 10px;}
 .top-border, .bottom-border{background: url('../img/border-caption-border.png') no-repeat;display:block;height:15px;}
@@ -235,7 +216,7 @@ div.border-caption {
 #landing #graphic-promos #indianoaks {width:34%;}
 .promo-panel-inner{padding:20px;/*display:table-cell;vertical-align: middle*/ }
 #graphic-promos img{width: 100%;}
-#graphic-promos:hover p,#graphic-promos:hover h2, #graphic-promos:hover img{opacity:.3;}
+#graphic-promos:hover p,#graphic-promos:hover h2, #graphic-promos:hover img{opacity:.6;}
 #graphic-promos a:hover {text-decoration: none;}
 #graphic-promos:hover a:hover img,#graphic-promos a:hover p,#graphic-promos a:hover h2{opacity:1;}
 #graphic-promos #keyona{background-color:#63A5F1;}
@@ -243,7 +224,7 @@ div.border-caption {
 #graphic-promos #indianoaks img{width: 75%;}
 #graphic-promos #rockriver{background-color:#abdea6;}
 
-}
+
 
 
 @media (max-width: 1028px){
@@ -252,7 +233,12 @@ div.border-caption {
 }
 
 @media (max-width: 1000px){
+	body{background-color: red};
 	.graphic-novel-advert-wrapper {margin-top:0;}
+	.graphic-novel p{font-size:20px;}
+	.graphic-novel h2{font-size:35px;line-height:1.1em;}
+	.graphic-novel h1, #come-on h1{font-size:80px;}
+	.gn-river{max-width:650px;}
 }
 
 @media (max-width: 767px) {
@@ -281,7 +267,7 @@ div.border-caption {
 
 @media (max-width: 600px) {
 	.graphic-novel h1{font-size:60px;}
-	.graphic-novel h2{font-size:28px;line-height:1.3em;}
+	.graphic-novel h2{font-size:28px;line-height:1.15em;}
 }
 
 @media (max-width: 350px) {
