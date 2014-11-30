@@ -262,6 +262,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 	#landing #graphic-promos #indianoaks, #landing #graphic-promos .promo-panel {width: 100%;}
 	#landing section.credits h3, #landing section.credits h2, #landing section.credits p{ padding-left:15px; padding-right:15px;}
 	#graphic-promos:hover p, #graphic-promos:hover h2, #graphic-promos:hover img {opacity:1}
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {margin-right:0px;margin-left: 0px;}
 }
 
 
