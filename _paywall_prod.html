@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <script src="http://ssor.tribdss.com/reg/tribune/chinews-graphics.js"></script>
 
 <script type="text/javascript">
@@ -12,3 +13,34 @@
        }
     });
 </script>
+=======
+<!--SSOR Start CSS -->
+<link href="http://www.chicagotribune.com/hive/stylesheets/ssor.css" media="all" rel="stylesheet" type="text/css" />
+<link href="http://www.chicagotribune.com/hive/stylesheets/registration_signin/registration.css?v=15" media="all" rel="stylesheet" type="text/css" />
+
+<script src="http://www.chicagotribune.com/hive/javascripts/registration_signin/registration-global.js?v=15"></script>
+<script>
+registration.manager.config.initialize({
+productCode: "chinews",
+brandingSiteName: "chicagotribune.com",
+registrationHostname: "https://chinews.signon.trb.com",
+metricsCookieName: "metrics_id"
+});
+</script>
+<!--SSOR End-->
+
+<!--Meter Start--> 
+<script>
+jQuery.ajax({
+url: '//' +
+(location.protocol=='https:' ? 's' : 'www') +
+'.tribdss.com/meter/ctcweb.js',
+dataType: 'script',
+cache: true,
+success: function() {
+trb.meteringService.modalCloseUrl = 'http://graphics.chicagotribune.com/democracy-denied/modal-close.html?';
+}
+});
+</script>
+<!--Meter End-->
+>>>>>>> Stashed changes
