@@ -23,13 +23,13 @@ article h1,article h2,article h3,article h4,article h5,article h6 {line-height:1
 /* ADD-IN NGUX UNTIl IT'S NATIVE */
 article p {color: #666;font-size: 18px;line-height: 27px;margin-bottom: 18px;position: relative;white-space: normal;}
 ul p, ol p{font-size: 16px}
-
+ 
 /* advert wrapper */
 .advert-wrapper {margin-top:25px;margin-bottom:25px;}
 .graphic-novel-advert-wrapper{padding: 25px 0 15px 0;margin: -6px 0 25px 0;background-color: #fff;text-align: center;}
 #unsafe-haven .graphic-novel-advert-wrapper{border-bottom:4px solid #D97C14;}
 #fight-and-flight .graphic-novel-advert-wrapper{border-bottom:4px solid #24961D;}
-#talking-truth .graphic-novel-advert-wrapper{border-bottom:4px solid #117CC1;}
+#in-her-words .graphic-novel-advert-wrapper{border-bottom:4px solid #117CC1;}
 
 
 .graphic-novel-advert-wrapper p small {
@@ -72,7 +72,7 @@ ul p, ol p{font-size: 16px}
 
 body#landing {padding-right: 0;padding-left: 0;}
 body#fight-and-flight{/*background-color:#abdea6*/;background-color:#73C56A;}
-body#talking-truth{background-color:#62A5EF;}
+body#in-her-words{background-color:#62A5EF;}
 body#unsafe-haven{background-color:#EBB145;}
 
 
