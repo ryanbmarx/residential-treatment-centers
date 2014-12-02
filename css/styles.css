@@ -245,6 +245,8 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 	.graphic-novel h2{font-size:35px;line-height:1.1em;}
 	.graphic-novel h1, #come-on h1{font-size:80px;}
 	.gn-river{max-width:650px;}
+		#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
+
 }
 
 @media (max-width: 767px) {
