@@ -70,6 +70,7 @@
 	<div class="container-fluid">
 		<article id='rockriver' class='graphic-novel' itemscope itemtype='http://schema.org/WebPage'>
 			{% include '_social-row.html' %}
+			{% include '_disclaimer-link.html' %}
 			<h1 itemprop='headline' class='text-center'>{{ rockriver.hede.blurb|process_text() }}</h1>
 			<h2 class='text-center'>{{ rockriver.subhede.blurb|process_text()}}</h2>
 			<section class='gn-river'>
