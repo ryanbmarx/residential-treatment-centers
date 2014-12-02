@@ -95,6 +95,7 @@ a.footnote{display:inline;padding:2px 3px;border-radius: 3px;color:#fff;backgrou
 .graphic-novel a:hover{text-decoration: underline}
 
 .graphic-novel .divider {background: url('../img/rule-horiz.png') #fff center -5px no-repeat;height: 8px;margin: 35px 0;}
+.graphic-novel .divider.short{max-width:320px;margin:15px auto}
 .graphic-novel .divider.graphicwhite {background: url('../img/rule-horiz.png') #fff center -19px no-repeat;}
 
 .graphic-novel .graphicwhite a, .graphic-novel .graphicwhite{color:#fff;}
@@ -104,7 +105,10 @@ a.footnote{display:inline;padding:2px 3px;border-radius: 3px;color:#fff;backgrou
 .graphic-novel .slim{max-width:400px;display:block;margin:15px auto;}
 .graphic-novel .make-center{display: block;margin:0 auto;}
 .graphic-novel .med-slim{max-width:600px;display:block;margin:15px auto;}
-
+#disclaimer-link{text-align:center;}
+#about{margin-bottom:0;}
+.disclaimer-link-return {line-height: 0;margin-top: 5px;margin-bottom: 7px;}
+.disclaimer-link-return p, .disclaimer-link-return small {margin:0;line-height: 1em}
 
 
 .border{border:2px solid black;}
