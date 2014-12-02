@@ -242,10 +242,12 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 @media (max-width: 1000px){
 	.graphic-novel-advert-wrapper {margin-top:0;}
 	.graphic-novel p{font-size:20px;}
-	.graphic-novel h2{font-size:35px;line-height:1.1em;}
+	.graphic-novel h2{font-size:30px;line-height:1.1em;}
 	.graphic-novel h1, #come-on h1{font-size:80px;}
-	.gn-river{max-width:650px;}
-		#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
+	.gn-river{max-width:600px;}
+	#indianoaks .gn-river{max-width:550px;}
+	#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
+	#life-woman p{max-width: 250px;font-size: 28px}
 
 }
 
