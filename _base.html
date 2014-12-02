@@ -1,0 +1,151 @@
+{% import '_macros.html' as macros with context %}
+{% import '_paywall_stage.html' as paywall_stage %}
+{% import '_paywall_prod.html' as paywall_prod %}
+<!DOCTYPE html>
+<html{% block html_tag_extras %}{% endblock %}>
+<head>
+    <title>{% block title %}{{ title|striptags }} -- Chicago Tribune{% endblock title %}</title>
+
+    {% block favicon %}
+    <link rel="shortcut icon" href="img/favicon{% if PREVIEW_SERVER %}-preview{% endif %}.ico" />
+    {% endblock %}
+
+    {% block opengraph %}
+    <meta property="og:url" content="http://{{ ROOT_URL }}/{{ PATH }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ og_description }}" />
+    <meta property="og:image" content="{{ og_image }}" />
+    {% endblock opengraph %}
+
+    {% block library_css %}
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.0.2/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/media.apps.chicagotribune.com/bootstrap/v2.3.2-ct.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//s3.amazonaws.com/media.apps.chicagotribune.com/bootstrap/v2.3.2-ct.2/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    {% endblock library_css %}
+
+    {% block css %}{% endblock %}
+
+    {% block shim %}
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% endblock shim %}
+
+    {% block meta %}
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {% endblock meta %}
+
+  {% block viewport %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endblock viewport %}
+
+  {% block google_analytics %}
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-9792248-25']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  {% endblock google_analytics %}
+
+  {% block library_scripts %}
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//s3.amazonaws.com/media.apps.chicagotribune.com/bootstrap/v2.3.2-ct.2/js/bootstrap.min.js"></script>
+  <script src="//s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.0.1/ads.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+  {% endblock %}
+  
+  {% block paywall %}
+    {% include "_paywall_stage.html" %}
+  {% endblock paywall %}
+</head>
+<body{% block bodyattrs %} class="{{ pagename }} has-nav" data-ad-path="news" data-ad-ptype="p" data-ad-iframe-url="./ad-iframe.html"{% endblock bodyattrs %}>
+
+{# Override the `container` block to disable default layout. #}
+{% block container %}
+  {% block nav %}{% include '_nav.html' %}{% endblock nav %}
+  {% block content %}{% endblock content %}
+  {% block footer %}{% include '_footer.html' %}{% endblock footer %}
+{% endblock container %}
+
+{% block scripts %}
+{% endblock scripts %}
+
+{% block omniture %}
+<script type="text/javascript">
+    var s_account = "{% if PREVIEW_SERVER %}tribglobaldev{% else %}tribglobal{% endif %}";
+</script>
+<!-- START OMNITURE // hive:metrics-tribune -->
+  
+<!-- SiteCatalyst code version: H.1.
+Copyright 1997-2005 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script type="text/javascript" src="http://www.chicagotribune.com/hive/javascripts/metrics/s_code_trb.js">
+</script>
+<script type="text/javascript">
+var title = (document.title && document.title.length > 0) ? document.title + ' - ' : '';
+s.pageName= title + "Chicago Tribune / {{ analytics_path|strip_slashes|replace('/', ' / ') }} -- News application, 3rd Party"; 
+s.server="www.chicagotribune.com"
+s.channel="Chicago Tribune:{{ analytics_path|strip_slashes|replace('/', ':') }}";
+s.prop38="3rd Party";
+s.eVar21="3rd Party";
+s.hier1="Chicago Tribune:{{ analytics_path|strip_slashes|replace('/', ':') }}"; 
+s.hier2="{{ analytics_path|strip_slashes|replace('/', ':') }}";
+s.hier4="{{ analytics_path|strip_slashes|replace('/', ':') }}";
+  
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code) 
+-->  
+</script><script type="text/javascript">
+<!--
+if(navigator.appVersion.indexOf('MSIE')>=0) document.write(unescape('%3C')+'\!-'+'-')
+//-->
+</script><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.1. -->
+<!-- START REVENUE SCIENCE PIXELLING CODE -->
+<script src="http://js.revsci.net/gateway/gw.js?csid=B08725" type="text/javascript">
+</script><script type="text/javascript">
+DM_addEncToLoc("Site", (s.server));
+DM_addEncToLoc("channel", (s.channel));
+DM_addEncToLoc("keyword", (s.prop3));
+DM_cat(s.hier1);
+DM_tag();
+</script><!-- END REVENUE SCIENCE PIXELLING CODE -->
+<!-- Time: Tue May 11 15:01:30 PDT 2010-->
+<!--x-Instance-Name: i9s27n1-->
+{% endblock omniture %}
+
+{% block chartbeat %}
+<script type='text/javascript'>
+    var _sf_async_config={};
+    /** CONFIGURATION START **/
+    _sf_async_config.uid = 3096;
+    _sf_async_config.domain = 'apps.chicagotribune.com';
+    _sf_async_config.useCanonical = true;
+    _sf_async_config.sections = '{{ title }}';
+    /** CONFIGURATION END **/
+    (function(){
+      function loadChartbeat() {
+        window._sf_endpt=(new Date()).getTime();
+        var e = document.createElement('script');
+        e.setAttribute('language', 'javascript');
+        e.setAttribute('type', 'text/javascript');
+        e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+        document.body.appendChild(e);
+      }
+      var oldonload = window.onload;
+      window.onload = (typeof window.onload != 'function') ?
+         loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script>
+{% endblock %}
+
+</body>
+</html>

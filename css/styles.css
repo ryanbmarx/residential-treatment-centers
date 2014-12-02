@@ -229,8 +229,10 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 #graphic-promos #indianoaks img{width: 75%;}
 #graphic-promos #rockriver{background-color:#abdea6;}
 
-
-
+/* SSOR Overwrites */
+.reg-dialog input[type="password"], .reg-dialog input[type="email"] {
+  padding: 0 0 0 32px;
+}
 
 @media (max-width: 1028px){
 	#graphic-promos .promo-panel p, #graphic-promos .promo-panel h2, #graphic-promos .promo-panel img{opacity:1;}

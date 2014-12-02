@@ -1,0 +1,14 @@
+<script src="http://ssor.trb.stage.tribdev.com/reg/tribune/chinews-graphics.js"></script>
+
+<script type="text/javascript">
+    var $ = jQuery;
+    $.ajax({
+       url: 'http://www.dss.trb.stage.tribdev.com/meter/ctcngux.min.js',
+       dataType: 'script',
+       cache: true,
+       success: function() {
+           trb.meteringService.modalCloseUrl = 'http://graphics.beta.tribapps.com/modalClose.html';
+           trb.meteringService.base.data.userAbandonUrl = 'http://graphics.beta.tribapps.com';
+       }
+    });
+</script>
