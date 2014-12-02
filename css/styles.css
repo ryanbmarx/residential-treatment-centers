@@ -194,7 +194,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 #rockriver .clothespin{padding:15px 0 15px 15px;}
 #rockriver .after-that-i-felt-unsafe{}
 #set-up-for-failure{background-color:#ABDEA6;}
-#rockriver #set-up-for-failure h2{position: absolute;max-width: 320px;padding: 0 25px;top:30%;left: 0;font-size: 70px;}
+#rockriver #set-up-for-failure h2{position: absolute;max-width: 320px;padding: 0 25px;top:30%;left: 0;font-size: 60px;}
 #rockriver #set-up-for-failure p, #rockriver #set-up-for-failure h3{padding:25px;}
 
 /* SOCIAL */
@@ -246,6 +246,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 	.graphic-novel h1, #come-on h1{font-size:80px;}
 	.gn-river{max-width:600px;}
 	#indianoaks .gn-river{max-width:550px;}
+	#rockriver .gn-river{max-width:550px;}
 	#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
 	#life-woman p{max-width: 250px;font-size: 28px}
 
@@ -267,7 +268,7 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 	#shadow {max-width:500px;margin:0 auto;display:block;}
 	#life-woman p{position:static;max-width:100%;padding:25px 25px 10px 25px;text-align: center;margin:0;font-size:26px;}
 	#come-on {font-size: 100px;line-height: .9em;margin-bottom: 35px;}
-	.promo-panel{width:100%;float:none;}
+	.promo-panel{width:100%;float:none;margin: 15px 0;}
 	#graphic-promos #indianoaks {width: 100%;}
 	#landing #graphic-promos #indianoaks, #landing #graphic-promos .promo-panel {width: 100%;}
 	#landing section.credits h3, #landing section.credits h2, #landing section.credits p{ padding-left:15px; padding-right:15px;}
