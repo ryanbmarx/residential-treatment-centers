@@ -5,7 +5,7 @@ Tarbell project configuration
 """
 
 # Short project name
-NAME = "rtc-graphic-novels"
+NAME = "rtc-graphic-essays"
 
 # Descriptive title of project
 TITLE = "Harsh Treatment"
@@ -25,12 +25,12 @@ S3_BUCKETS = {
     #     "mytarget": "mys3url.bucket.url/some/path"
     # then use tarbell publish mytarget to publish to it
     "production": "graphics.chicagotribune.com/news/watchdog/rtc/graphic-essays",
-    "staging": "graphics.beta.tribapps.com/rtc-graphic-novels",
+    "staging": "graphics.beta.tribapps.com/rtc-graphic-essays",
     "kaarin": "graphics.chicagotribune.com/rtc-graphic-novels-for-kaarin-and-only-for-her-eyes-dfhjskfhsd-dfhglkdfhgkjdf"
 }
 
 # Default template variables
 DEFAULT_CONTEXT = {
-    'name': 'rtc-graphic-novels',
+    'name': 'rtc-graphic-essays',
     'title': 'Harsh Treatment'
 }
