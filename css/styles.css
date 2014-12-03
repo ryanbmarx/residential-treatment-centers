@@ -234,8 +234,8 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 #graphic-promos #rockriver{background-color:#abdea6;}
 
 /* SSOR Overwrites */
-.reg-dialog input[type="password"], .reg-dialog input[type="email"] {
-  padding: 0 0 0 32px;
+#reg-overlay .reg-input {
+  height: 3.5em;
 }
 
 @media (max-width: 1028px){
