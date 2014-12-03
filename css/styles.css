@@ -111,6 +111,7 @@ a.footnote{display:inline;padding:2px 3px;border-radius: 3px;color:#fff;backgrou
 .disclaimer-link-return {line-height: 0;margin-top: 5px;margin-bottom: 7px;}
 .disclaimer-link-return p, .disclaimer-link-return small {margin:0;line-height: 1em}
 
+.footnotes ul.unstyled p{font-size: 16px;margin: 8px 0px;}
 
 .border{border:2px solid black;}
 div.border, img.border{
