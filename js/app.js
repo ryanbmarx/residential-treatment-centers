@@ -14,7 +14,30 @@ var add_facebook_comments = function() {
 };
 
 $(document).ready(function(){
+  $('.footnote').click(function(e){
+    e.preventDefault();
+    var clickedOn = $(this).attr('href');
+    if ($(window).width()>767){
+    var goTo = $(clickedOn).offset().top-55;
+  } else {
+    var goTo = $(clickedOn).offset().top-15;
+  }
+    $("body").scrollTop(goTo);
+  });
+
+  $('a.return').click(function(e){
+    e.preventDefault();
+    var clickedOn = $(this).attr('href');
+        var clickedOn = $(this).attr('href');
+        console.log(clickedOn);
+        var goTo = $(clickedOn).offset().top-100;
+      $("body").scrollTop(goTo);
+  });
+
 	$("a[data-mh*='promo'] div").matchHeight();
+  $(window).resize(function(){
+    $("a[data-mh*='promo'] div").matchHeight();
+  })
   // Load FB comments
   if ( $('meta[property="fb:app_id"]').length > 0 )
     add_facebook_comments();
