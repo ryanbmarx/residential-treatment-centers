@@ -27,6 +27,13 @@
 <meta name="description" content="{{ indianoaks.meta_desc.blurb }}">
 {% endblock %}
 
+{% block opengraph %}
+<meta property="og:url" content="http://{{ ROOT_URL }}/{{ PATH }}" />
+<meta property="og:title" content="{{ indianoaks.hede.blurb|striptags }}" />
+<meta property="og:description" content="{{ indianoaks.teaser.blurb }}" />
+<meta property="og:image" content="http://{{ ROOT_URL }}/{{ PATH }}/img/indianoaks/frame00-d3.jpg" />
+{% endblock opengraph %}
+
 
 {% block content %}
 

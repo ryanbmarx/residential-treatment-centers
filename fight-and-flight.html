@@ -31,6 +31,12 @@
 
 {% endblock %}
 
+{% block opengraph %}
+<meta property="og:url" content="http://{{ ROOT_URL }}/{{ PATH }}" />
+<meta property="og:title" content="{{ rockriver.hede.blurb|striptags }}" />
+<meta property="og:description" content="{{ rockriver.teaser.blurb }}" />
+<meta property="og:image" content="http://{{ ROOT_URL }}/{{ PATH }}/../img/rockriver/frame10-d4.jpg" />
+{% endblock opengraph %}
 
 
 {% block content %}
@@ -133,7 +139,7 @@
 				</div>
 				<div class='divider'></div>
 			</section>
-			<h2 class='text-center graphicwhite'>{{ rockriver.sub3.blurb }} <a id ='11-footnote' class='footnote' href='#footnote11'>11</a></h2>
+			<h2 class='text-center graphicwhite'>{{ rockriver.sub3.blurb }} <a id ='sub3-footnote' class='footnote' href='#footnote11'>11</a></h2>
 			<section class='gn-river'>
 				<div class='panel-wrapper'>	
 					<img itemprop='image' alt="An illustration of several girls escaping their caretakers through a cornfield."  class='border text-center' src='img/rockriver/frame10-d4.jpg' />

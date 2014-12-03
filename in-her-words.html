@@ -35,7 +35,7 @@ body{
 {% endblock %}
 
     {% block opengraph %}
-    {{ super() }}
+    <meta property="og:url" content="http://{{ ROOT_URL }}/{{ PATH }}" />
     <meta property="og:title" content="{{ keyona.hede.blurb|striptags }}" />
     <meta property="og:description" content="{{ keyona.teaser.blurb }}" />
     <meta property="og:image" content="http://{{ ROOT_URL }}/{{ PATH }}/img/keyona/day2-frame1.jpg" />
