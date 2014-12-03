@@ -191,8 +191,8 @@ div.border-caption {width: 80%;overflow-wrap: break-word;overflow:hidden;margin:
 
 /* SPECIAL FOR ROCK RIVER */
 
-#rockriver.graphic-novel .divider {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -5px no-repeat;}
-#rockriver.graphic-novel .divider.graphicwhite {background: url('../img/rockriver/rule-horiz.png') #84AC80 center -19px no-repeat;}
+#rockriver.graphic-novel .divider {background: url('../img/rockriver/rule-horiz.png') #73C56A center -5px no-repeat;}
+#rockriver.graphic-novel .divider.graphicwhite {background: url('../img/rockriver/rule-horiz.png') #73C56A center -19px no-repeat;}
 #rockriver .clothespin{padding:15px 0 15px 15px;}
 #rockriver .after-that-i-felt-unsafe{}
 #set-up-for-failure{background-color:#ABDEA6;}
