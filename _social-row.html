@@ -22,28 +22,30 @@
   {% set social_OG_img = og_image|striptags|urlencode %}
 {% endif %}
 
+<style type="text/css">
+</style>
 
 
   
 <ul id="social-menu" >
   <li>
     <a target="_blank" href="https://twitter.com/share?url={{ ROOT_URL }}/{{ PATH }}&text={{ social_tweet }} http://{{ ROOT_URL }}/{{ PATH }}">
-      <i class="nguxicon-twitter"></i> <span class="hidden">Twitter</span>
+      <i class="icon-twitter"></i> <span class="hidden">Twitter</span>
     </a> 
   </li>
   <li>
     <a target="_blank" href="https://www.facebook.com/sharer.php?u={{ ROOT_URL }}/{{ PATH }}&t={{ social_OG_title }}">
-      <i class="nguxicon-facebook"></i> <span class="hidden">Facebook</span>
+      <i class="icon-facebook"></i> <span class="hidden">Facebook</span>
     </a>  
   </li>
   <li>
     <a target="_blank" href="https://plus.google.com/share?url={{ ROOT_URL }}/{{ PATH }}">
-      <i class="nguxicon-gplus"></i> <span class="hidden">Google+</span>
+      <i class="icon-google-plus"></i> <span class="hidden">Google+</span>
     </a>  
   </li>
   <li>
     <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ ROOT_URL }}/{{ PATH }}&media={{ social_OG_img }}&description={{ social_OG_desc }}">
-      <i class="nguxicon-pintrest"></i> <span class="hidden">Pinterest</span>
+      <i class="icon-pinterest"></i> <span class="hidden">Pinterest</span>
     </a>  
   </li>
 </ul>
